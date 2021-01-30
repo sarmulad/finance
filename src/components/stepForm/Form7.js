@@ -4,7 +4,6 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
 import { Typography, Button } from '@material-ui/core';
 
 import useStyles from './styles.js'
@@ -23,29 +22,25 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">How would you characterize your overall health?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="How would you characterize your overall health?                     <FormControlLabel 
-            " name="How would you characterize your overall health?" value={value} onChange={handleChange}>
+            <RadioGroup style={{paddingLeft:'10px'}} aria-label="How would you characterize your overall health? " name="How would you characterize your overall health?" value={value} onChange={handleChange}>
                 <FormControlLabel
-                 style={{border:'1px solid black', 
-                 marginTop:'5px', borderRadius:'10px'}}  
-                 value="Excellent" control={<Radio />} 
+                className={classes.formControl}
+                 value="Excellent" control={<Radio color='black' />} 
                  label="Excellent" />
                 <FormControlLabel 
-                style={{border:'1px solid black',
-                 marginTop:'5px',borderRadius:'10px'}} 
+                className={classes.formControl} 
                  value="Good" 
-                 control={<Radio />} 
+                 control={<Radio color='black' />} 
                  label="Good" />
                 <FormControlLabel
-                 style={{border:'1px solid black',
-                 marginTop:'5px',borderRadius:'10px'}} 
+                className={classes.formControl}
                  value="Fair" 
-                 control={<Radio />}
+                 control={<Radio color='black' />}
                   label="Fair" />
                 <FormControlLabel 
-                style={{border:'1px solid black',marginTop:'5px',borderRadius:'10px'}} 
+                className={classes.formControl}
                 value="Poor" 
-                 control={<Radio />} 
+                 control={<Radio color='black' />} 
                  label=" Poor" />
                 
             </RadioGroup>

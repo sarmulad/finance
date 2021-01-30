@@ -2,13 +2,26 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export default makeStyles(()=>({
     form: {
-       marginTop:'100px'
+       marginTop:'100px',
+       maxWidth:'80%',
+       overflowX:'hidden',
+       
     
     },
     title:{
-        padding:'20px',
+        padding:'10px 0px',
+         
         textAlign:'center',
-        backgroundColor:'green',
+        backgroundColor:'#00a86b',
         color:'white'
+    },
+    btn:{
+        backgroundColor:'#00a86b',
+        color:'white'
+    },
+    formControl:{
+        border:'1px solid #dee1e9',
+         marginTop:'5px',
+          borderRadius:'10px'
     }
 }))

@@ -4,13 +4,14 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
+
 import { Typography, Button } from '@material-ui/core';
 
 import useStyles from './styles.js'
 
  const Form24 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('');
+     const [value, setValue] = React.useState('Less than $100');
 
      const handleChange = (event) => {
        setValue(event.target.value);
@@ -21,51 +22,50 @@ import useStyles from './styles.js'
         <Container maxWidth='xs' className= {classes.form}>
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">Please estimate your total investable assets.</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Please estimate your total investable assets.."
-                name="Please estimate your total investable assets.." 
+            <Typography variant="h5">Please estimate your current monthly savings.</Typography>
+            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Please estimate your current monthly savings.."
+                name="Please estimate your current monthly savings.." 
                 value={value} 
                 onChange={handleChange}>
                 <FormControlLabel
                 className={classes.formControl}   
-                    value="Less than $25,000"
+                    value="Less than $100"
                     control={<Radio color='black'/>} 
                     label="
-                    Less than $25,000" />
+                    Less than $100" />
+
+                <FormControlLabel 
+                className={classes.formControl}    
+                    value="$100 - $249" 
+                    control={<Radio  color='black'/>} 
+                    label="$100 - $249" /> 
 
                 <FormControlLabel 
                 className={classes.formControl}   
-                    value="$25,000 - $99,999" 
-                    control={<Radio color='black'/>} 
-                    label="$25,000 - $99,999" /> 
-
-                <FormControlLabel 
-                className={classes.formControl}   
-                    value="$100,000 - $249,999" 
-                    control={<Radio color='black'/>} 
-                    label="$100,000 - $249,999" /> 
+                    value="$250 - $499" 
+                    control={<Radio  color='black'/>} 
+                    label="$250 - $499" /> 
 
                     <FormControlLabel 
                     className={classes.formControl}   
-                    value="$250,000 - $999,999" 
-                    control={<Radio  color='black'/>} 
-                    label="$250,000 - $999,999" /> 
+                    value="$500 - $999" 
+                    control={<Radio color='black'/>} 
+                    label="$500 - $999" /> 
 
                     <FormControlLabel 
                     className={classes.formControl}    
-                    value="$1,000,000 - $4,999,999" 
-                    control={<Radio color='black' />} 
-                    label="$1,000,000 - $4,999,999" /> 
+                    value="$1,000 - $1,999" 
+                    control={<Radio color='black'/>} 
+                    label="$1,000 - $1,999" /> 
 
                     <FormControlLabel 
                     className={classes.formControl}   
-                    value="Over $5,000,000" 
+                    value="Over $2,000" 
                     control={<Radio color='black'/>} 
-                    label="Over $5,000,000" /> 
+                    label="Over $2,000" /> 
               
                 
             </RadioGroup>
-
             <div >
                 <Button 
                 variant='contained'

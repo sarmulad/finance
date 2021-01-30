@@ -20,15 +20,15 @@ import useStyles from './styles.js'
 
     return (
         <Container maxWidth='xs' className= {classes.form}>
-            <h3 className= {classes.title}>Find Your Advisor Match</h3>
+            <Typography variant='h6' className= {classes.title}>Find Your Advisor Match</Typography>
             <FormControl component="fieldset" style={{width:'100%'}}>
-                <Typography variant="h5">When would you like to retire?</Typography>
+                <Typography variant="h5" style={{marginBottom:'20px'}}>When would you like to retire?</Typography>
                 <RadioGroup style={{paddingLeft:'10px'}} aria-label=" retirement time" name="retirement time" value={value} onChange={handleChange}>
-                    <FormControlLabel style={{border:'1px solid black', marginTop:'5px', borderRadius:'10px'}}  value="1-4 years" control={<Radio />} label="1-4 years" />
-                    <FormControlLabel style={{border:'1px solid black', marginTop:'5px',borderRadius:'10px'}} value="5-9 years" control={<Radio />} label="5-9 years" />
-                    <FormControlLabel style={{border:'1px solid black',marginTop:'5px',borderRadius:'10px'}} value="10-19 years" control={<Radio />} label="10-19 years" />
-                    <FormControlLabel style={{border:'1px solid black',marginTop:'5px',borderRadius:'10px'}} value=" 20-29 years"  control={<Radio />} label=" 20-29 years" />
-                    <FormControlLabel style={{border:'1px solid black', marginTop:'5px',borderRadius:'10px'}} value="30+ years"  control={<Radio />} label=" 30+ years" />
+                    <FormControlLabel  className={classes.formControl}  value="1-4 years" control={<Radio color='black'/>} label="1-4 years" />
+                    <FormControlLabel  className={classes.formControl} value="5-9 years" control={<Radio color='black'/>} label="5-9 years" />
+                    <FormControlLabel  className={classes.formControl}value="10-19 years" control={<Radio color='black'/>} label="10-19 years" />
+                    <FormControlLabel  className={classes.formControl} value=" 20-29 years"  control={<Radio color='black'/>} label=" 20-29 years" />
+                    <FormControlLabel  className={classes.formControl} value="30+ years"  control={<Radio color='black'/>} label=" 30+ years" />
                 </RadioGroup>
              <div >
                 <Button 

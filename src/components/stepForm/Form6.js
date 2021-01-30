@@ -4,7 +4,6 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
 import { Typography, Button } from '@material-ui/core';
 
 import useStyles from './styles.js'
@@ -26,26 +25,23 @@ import useStyles from './styles.js'
                 <RadioGroup style={{paddingLeft:'10px'}} aria-label="                     <FormControlLabel 
                 " name="What activity is most important to you in retirement?" value={value} onChange={handleChange}>
                     <FormControlLabel
-                     style={{border:'1px solid black', 
-                     marginTop:'5px', borderRadius:'10px'}}  
-                     value="Savings and investments" control={<Radio />} 
+                    className={classes.formControl}
+                     value="Savings and investments" control={<Radio color='black'/>} 
                      label="Savings and investments" />
                     <FormControlLabel 
-                    style={{border:'1px solid black',
-                     marginTop:'5px',borderRadius:'10px'}} 
+                    className={classes.formControl}
                      value="Employer (Pensions)" 
-                     control={<Radio />} 
+                     control={<Radio  color='black'/>} 
                      label="Employer (Pensions)" />
                     <FormControlLabel
-                     style={{border:'1px solid black',
-                     marginTop:'5px',borderRadius:'10px'}} 
+                    className={classes.formControl}
                      value="Government" 
-                     control={<Radio />}
+                     control={<Radio color='black' />}
                       label="Government" />
                     <FormControlLabel 
-                    style={{border:'1px solid black',marginTop:'5px',borderRadius:'10px'}} 
+                    className={classes.formControl}
                     value=" Other" 
-                     control={<Radio />} 
+                     control={<Radio color='black' />} 
                      label="  Other" />
                     
                 </RadioGroup>

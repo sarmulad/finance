@@ -24,23 +24,33 @@ import Form21 from '../stepForm/Form21'
 import Form22 from '../stepForm/Form22'
 import Form23 from '../stepForm/Form23'
 import Form24 from '../stepForm/Form24'
+import Form25 from '../stepForm/Form25'
+import Form26 from '../stepForm/Form26'
+import Form27 from '../stepForm/Form27'
+import SucessPage from '../stepForm/SucessPage'
+
 
 
 
 
 const defaultData ={
-    HowConfidentAreYouInYourLongTermFinancialPlan :'',
-    WhenWouldYouLikeToRetire:'',
-    HowDoYouCurrentlyManageYourMoney :'',
-    WhatActivityIsMostImportantToYouInRetirement :'',
-    HowConfidentAreYouInYourLongTermFinancialPlan :'',
-    HowConfidentAreYouInYourLongTermFinancialPlan :'',
-    HowConfidentAreYouInYourLongTermFinancialPlan :'',
-    HowConfidentAreYouInYourLongTermFinancialPlan :'',
-    HowConfidentAreYouInYourLongTermFinancialPlan :'',
+   LOfConfidence:'',
+   2:'',
+   3:'',
+   4:'',
+   5:'',
+   6:'',
+   7:'',
+   8:'',
+   9:'',
+   10:'',
+  
+
 
 };
-    
+
+console.log(defaultData.LOfConfidence)
+ 
 
 const steps = [
     {id:1},
@@ -66,6 +76,13 @@ const steps = [
     {id:21},
     {id:22},
     {id:23},
+    {id:24},
+    {id:25},
+    {id:26},
+    {id:27},
+    {id:28},
+
+
 
 ]
 
@@ -128,10 +145,18 @@ const MultistepForm = () => {
             return <Form23 {...props}/>;
             case 24 : 
             return <Form24 {...props}/>;
+            case 25 : 
+            return <Form25 {...props}/>;
+             case 26 : 
+            return <Form26 {...props}/>;
+            case 27 : 
+            return <Form27 {...props}/>;
+            case 28:
+                return <SucessPage/>
         }
     return (
-        <div>
-            <h1 style={{color:'green', marginTop:'100px'}}>hello</h1>
+        <div className='body'>
+            
         </div>
     )
 }

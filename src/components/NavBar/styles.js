@@ -5,6 +5,8 @@ export default makeStyles(()=>({
         boxShadow: 'none',
         borderBottom : '1px solid rgba(0, 0, 0, 0.12)',
         padding:'20px',
+        backgroundColor:'grey'
+
         
        
     }

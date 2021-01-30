@@ -25,30 +25,28 @@ import useStyles from './styles.js'
                 <Typography variant="h5">What activity is most important to you in retirement?</Typography>
                 <RadioGroup style={{paddingLeft:'10px'}} aria-label=" What activity is most important to you in retirement?" name="What activity is most important to you in retirement?" value={value} onChange={handleChange}>
                     <FormControlLabel
-                     style={{border:'1px solid black', 
-                     marginTop:'5px', borderRadius:'10px'}}  
-                     value="Traveling" control={<Radio />} 
+                    className={classes.formControl}  
+                     value="Traveling" control={<Radio color='black'/>} 
                      label="Traveling" />
                     <FormControlLabel 
-                    style={{border:'1px solid black',
-                     marginTop:'5px',borderRadius:'10px'}} 
+                    className={classes.formControl}
                      value="Spending time with family and friends" 
-                     control={<Radio />} 
+                     control={<Radio color='black' />} 
                      label="Spending time with family and friends" />
                     <FormControlLabel
-                     style={{border:'1px solid black',
-                     marginTop:'5px',borderRadius:'10px'}} 
+                    className={classes.formControl}
                      value="Pursuing hobbies" 
-                     control={<Radio />}
+                     control={<Radio  color='black'/>}
                       label="Pursuing hobbies" />
                     <FormControlLabel 
-                    style={{border:'1px solid black',marginTop:'5px',borderRadius:'10px'}} 
+                    className={classes.formControl}
                     value=" Working part-time" 
-                     control={<Radio />} 
+                     control={<Radio color='black' />} 
                      label="  Working part-time" />
-                    <FormControlLabel style={{border:'1px solid black', marginTop:'5px',borderRadius:'10px'}}
+                    <FormControlLabel 
+                    className={classes.formControl}
                      value="  Other" 
-                      control={<Radio />} 
+                      control={<Radio color='black' />} 
                       label="  Others" />
                 </RadioGroup>
              <div >

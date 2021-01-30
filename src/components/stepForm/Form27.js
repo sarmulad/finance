@@ -1,5 +1,6 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
+import TextField from '@material-ui/core/TextField';
 
 
 import { Typography, Button } from '@material-ui/core';
@@ -18,9 +19,9 @@ import useStyles from './styles.js'
     return (
         <Container maxWidth='xs' className= {classes.form}>
             <h3 className= {classes.title}>Find Your Advisor Match</h3>
-                <Typography variant='h4'>Where are you located ? </Typography>
-                <input type='text' placeholder='Zip code (e.g 90210)'
-                    name='zip code'
+                <Typography variant='h4'>Is there anything else you'd like your matches to know? (optional) </Typography>
+                <input type='text' 
+                    name='message to match'
                     onChange = {handleChange}
                     value = {value}
                     style={{border:'1px solid black', padding:'15px',margin:'50px 0px 150px 0px', width:'90%',outline:'none'}}
