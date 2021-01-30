@@ -153,6 +153,8 @@ const MultistepForm = () => {
             return <Form27 {...props}/>;
             case 28:
                 return <SucessPage/>
+                default:null
+
         }
     return (
         <div className='body'>
