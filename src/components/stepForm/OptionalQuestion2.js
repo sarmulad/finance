@@ -9,7 +9,8 @@ import Accordion from './Accordion'
 
 import useStyles from './styles.js'
 
- const Form9 = ({formData, navigation, setForm}) => {
+ const OptionalQuestion2 = ({formData, navigation, setForm}) => {
+
      const classes =useStyles();
      const [value, setValue] = React.useState('No');
 
@@ -22,9 +23,9 @@ import useStyles from './styles.js'
         <Container maxWidth='xs' className= {classes.form}>
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">Are you married?</Typography>
+            <Typography variant="h5">Have you refinanced your home recently to take advantage of low interest rates?</Typography>
             <RadioGroup style={{paddingLeft:'10px'}} aria-label="Are you married ?
-            " name="Are you married?" value={value} onChange={handleChange}>
+            " name="Have you refinanced your home recently to take advantage of low interest rates?" value={value} onChange={handleChange}>
                 <FormControlLabel
                 className={classes.formControl}  
                  value="No"
@@ -35,6 +36,7 @@ import useStyles from './styles.js'
                  value="Yes" 
                  control={<Radio color='black'/>} 
                  label="Yes" />
+               
                 
             </RadioGroup>
          <div >
@@ -49,8 +51,7 @@ import useStyles from './styles.js'
             variant='contained'
             color='secondary' 
             style={{marginTop:'1rem'}}
-            onClick ={()=>
-                navigation.next()}>
+            onClick ={()=>navigation.next()}>
             Next
             </Button>
          </div>
@@ -61,4 +62,4 @@ import useStyles from './styles.js'
     )
 }
 
-export default Form9
+export default OptionalQuestion2

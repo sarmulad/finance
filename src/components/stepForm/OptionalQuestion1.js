@@ -9,9 +9,10 @@ import Accordion from './Accordion'
 
 import useStyles from './styles.js'
 
- const Form9 = ({formData, navigation, setForm}) => {
+ const OptionalQuestion1 = ({formData, navigation, setForm}) => {
+
      const classes =useStyles();
-     const [value, setValue] = React.useState('No');
+     const [value, setValue] = React.useState('Separately');
 
      const handleChange = (event) => {
        setValue(event.target.value);
@@ -22,19 +23,24 @@ import useStyles from './styles.js'
         <Container maxWidth='xs' className= {classes.form}>
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">Are you married?</Typography>
+            <Typography variant="h5">Are you saving jointly or separately?</Typography>
             <RadioGroup style={{paddingLeft:'10px'}} aria-label="Are you married ?
-            " name="Are you married?" value={value} onChange={handleChange}>
+            " name="Are you saving jointly or separately?" value={value} onChange={handleChange}>
                 <FormControlLabel
                 className={classes.formControl}  
-                 value="No"
+                 value="Separately"
                   control={<Radio color='black'/>} 
-                 label="No" />
+                 label="Separately" />
                 <FormControlLabel 
                 className={classes.formControl}
-                 value="Yes" 
+                 value="Jointly" 
                  control={<Radio color='black'/>} 
-                 label="Yes" />
+                 label="Jointly" />
+                 <FormControlLabel 
+                className={classes.formControl}
+                 value="Not Applicable" 
+                 control={<Radio color='black'/>} 
+                 label="Not Applicable" />
                 
             </RadioGroup>
          <div >
@@ -49,8 +55,7 @@ import useStyles from './styles.js'
             variant='contained'
             color='secondary' 
             style={{marginTop:'1rem'}}
-            onClick ={()=>
-                navigation.next()}>
+            onClick ={()=>navigation.next()}>
             Next
             </Button>
          </div>
@@ -61,4 +66,4 @@ import useStyles from './styles.js'
     )
 }
 
-export default Form9
+export default OptionalQuestion1

@@ -4,7 +4,8 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import FormLabel from '@material-ui/core/FormLabel';
+import Accordion from './Accordion'
+
 import { Typography, Button } from '@material-ui/core';
 
 import useStyles from './styles.js'
@@ -46,6 +47,8 @@ import useStyles from './styles.js'
                 Next
                 </Button>
              </div>
+             <Accordion/>
+
           </FormControl>
        </Container>
     )

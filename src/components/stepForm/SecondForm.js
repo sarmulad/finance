@@ -6,6 +6,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 
 import { Typography, Button } from '@material-ui/core';
+import Accordion from './Accordion'
 
 import useStyles from './styles.js'
 
@@ -46,6 +47,7 @@ import useStyles from './styles.js'
                 Next
                 </Button>
              </div>
+             <Accordion/>
           </FormControl>
        </Container>
     )

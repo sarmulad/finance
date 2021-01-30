@@ -9,9 +9,10 @@ import Accordion from './Accordion'
 
 import useStyles from './styles.js'
 
- const Form9 = ({formData, navigation, setForm}) => {
+ const OptionalQuestion3 = ({formData, navigation, setForm}) => {
+
      const classes =useStyles();
-     const [value, setValue] = React.useState('No');
+     const [value, setValue] = React.useState('I’m unsatisfied with my current advisor');
 
      const handleChange = (event) => {
        setValue(event.target.value);
@@ -22,19 +23,37 @@ import useStyles from './styles.js'
         <Container maxWidth='xs' className= {classes.form}>
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">Are you married?</Typography>
+            <Typography variant="h5">Why are you looking for a new one?</Typography>
             <RadioGroup style={{paddingLeft:'10px'}} aria-label="Are you married ?
-            " name="Are you married?" value={value} onChange={handleChange}>
+            " name="Why are you looking for a new one?" value={value} onChange={handleChange}>
                 <FormControlLabel
                 className={classes.formControl}  
-                 value="No"
+                 value="I’m unsatisfied with my current advisor"
                   control={<Radio color='black'/>} 
-                 label="No" />
+                 label="I’m unsatisfied with my current advisor" />
                 <FormControlLabel 
                 className={classes.formControl}
-                 value="Yes" 
+                 value="I’d like to get another advisor’s perspective" 
                  control={<Radio color='black'/>} 
-                 label="Yes" />
+                 label="I’d like to get another advisor’s perspective" />
+                 <FormControlLabel 
+                className={classes.formControl}
+                 value="I have substantial wealth that I’d like to divide with another advisor" 
+                 control={<Radio color='black'/>} 
+                 label="I have substantial wealth that I’d like to divide with another advisor" />
+                 <FormControlLabel 
+                className={classes.formControl}
+                 value="
+                 I recently relocated" 
+                 control={<Radio color='black'/>} 
+                 label=" I recently relocated" />
+                 <FormControlLabel 
+                className={classes.formControl}
+                 value="
+                 Other" 
+                 control={<Radio color='black'/>} 
+                 label="Other" />
+               
                 
             </RadioGroup>
          <div >
@@ -49,8 +68,7 @@ import useStyles from './styles.js'
             variant='contained'
             color='secondary' 
             style={{marginTop:'1rem'}}
-            onClick ={()=>
-                navigation.next()}>
+            onClick ={()=>navigation.next()}>
             Next
             </Button>
          </div>
@@ -61,4 +79,4 @@ import useStyles from './styles.js'
     )
 }
 
-export default Form9
+export default OptionalQuestion3

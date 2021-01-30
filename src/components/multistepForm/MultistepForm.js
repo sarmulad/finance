@@ -28,6 +28,10 @@ import Form25 from '../stepForm/Form25'
 import Form26 from '../stepForm/Form26'
 import Form27 from '../stepForm/Form27'
 import SucessPage from '../stepForm/SucessPage'
+import  OptionalQuestion1   from    '../stepForm/OptionalQuestion1'
+import  OptionalQuestion2   from    '../stepForm/OptionalQuestion2'
+import  OptionalQuestion3   from    '../stepForm/OptionalQuestion3'
+
 
 
 
@@ -116,51 +120,58 @@ const MultistepForm = () => {
             case 9 : 
             return <Form9 {...props}/>;
             case 10 : 
-            return <Form10 {...props}/>;
+            return <OptionalQuestion1 {...props}/>;
             case 11 : 
-            return <Form11 {...props}/>;
+            return <Form10 {...props}/>;
             case 12 : 
-            return <Form12 {...props}/>;
+            return <OptionalQuestion2 {...props}/>;
             case 13 : 
-            return <Form13 {...props}/>;
+            return <Form11 {...props}/>;
             case 14 : 
-            return <Form14 {...props}/>;
+            return <Form12 {...props}/>;
             case 15 : 
-            return <Form15 {...props}/>;
+            return <Form13 {...props}/>;
             case 16 : 
-            return <Form16 {...props}/>;
+            return <Form14 {...props}/>;
             case 17 : 
-            return <Form17 {...props}/>;
+            return <Form15 {...props}/>;
             case 18 : 
-            return <Form18 {...props}/>;
+            return <Form16 {...props}/>;
             case 19 : 
-            return <Form19 {...props}/>;
+            return <Form17 {...props}/>;
             case 20 : 
-            return <Form20 {...props}/>;
+            return <Form18 {...props}/>;
             case 21 : 
-            return <Form21 {...props}/>;
+            return <Form19 {...props}/>;
             case 22 : 
-            return <Form22 {...props}/>;
+            return <OptionalQuestion2 {...props}/>;
             case 23 : 
-            return <Form23 {...props}/>;
+            return <Form20 {...props}/>;
             case 24 : 
-            return <Form24 {...props}/>;
+            return <Form21 {...props}/>;
             case 25 : 
-            return <Form25 {...props}/>;
-             case 26 : 
-            return <Form26 {...props}/>;
+            return <Form22 {...props}/>;
+            case 26 : 
+            return <Form23 {...props}/>;
             case 27 : 
+            return <Form24 {...props}/>;
+            case 28 : 
+            return <Form25 {...props}/>;
+             case 29 : 
+            return <Form26 {...props}/>;
+            case 30 : 
             return <Form27 {...props}/>;
-            case 28:
+            case 31:
                 return <SucessPage/>
-                default:null
+            default:
+                return (
+                    <div className='body'>
+                        
+                    </div>
+                )
 
         }
-    return (
-        <div className='body'>
-            
-        </div>
-    )
+  
 }
 
 export default MultistepForm

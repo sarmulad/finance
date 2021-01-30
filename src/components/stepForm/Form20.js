@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 
+import Accordion from './Accordion'
 
 import { Typography, Button } from '@material-ui/core';
 
@@ -42,6 +43,8 @@ import useStyles from './styles.js'
                 Next
                 </Button>
             </div>
+            <Accordion/>
+
 </Container>
     )
 }
