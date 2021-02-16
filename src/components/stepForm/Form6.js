@@ -11,11 +11,13 @@ import useStyles from './styles.js'
 
  const Form6= ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('Savings and investments');
+     const{Wheredoyouexpectthemajorityofyourretirementincometocomefrom}=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('Savings and investments');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -23,8 +25,7 @@ import useStyles from './styles.js'
             <h3 className= {classes.title}>Find Your Advisor Match</h3>
             <FormControl component="fieldset" style={{width:'100%'}}>
                 <Typography variant="h5">Where do you expect the majority of your retirement income to come from?</Typography>
-                <RadioGroup style={{paddingLeft:'10px'}} aria-label="                     <FormControlLabel 
-                " name="What activity is most important to you in retirement?" value={value} onChange={handleChange}>
+                <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label="" name="Wheredoyouexpectthemajorityofyourretirementincometocomefrom" value={Wheredoyouexpectthemajorityofyourretirementincometocomefrom} onChange={setForm}>
                     <FormControlLabel
                     className={classes.formControl}
                      value="Savings and investments" control={<Radio color='black'/>} 

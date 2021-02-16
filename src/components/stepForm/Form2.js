@@ -10,13 +10,15 @@ import Accordion from './Accordion'
 
 import useStyles from './styles.js'
 
- const SecondForm = ({formData, navigation, setForm}) => {
+ const Form2 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('1-4 years');
+     const{retirementTime} = formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('1-4 years');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -24,7 +26,7 @@ import useStyles from './styles.js'
             <Typography variant='h6' className= {classes.title}>Find Your Advisor Match</Typography>
             <FormControl component="fieldset" style={{width:'100%'}}>
                 <Typography variant="h5" style={{marginBottom:'20px'}}>When would you like to retire?</Typography>
-                <RadioGroup style={{paddingLeft:'10px'}} aria-label=" retirement time" name="retirement time" value={value} onChange={handleChange}>
+                <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label=" retirement time" name="retirementTime" value={retirementTime} onChange={setForm}>
                     <FormControlLabel  className={classes.formControl}  value="1-4 years" control={<Radio color='black'/>} label="1-4 years" />
                     <FormControlLabel  className={classes.formControl} value="5-9 years" control={<Radio color='black'/>} label="5-9 years" />
                     <FormControlLabel  className={classes.formControl}value="10-19 years" control={<Radio color='black'/>} label="10-19 years" />
@@ -53,4 +55,4 @@ import useStyles from './styles.js'
     )
 }
 
-export default SecondForm
+export default Form2

@@ -11,11 +11,13 @@ import useStyles from './styles.js'
 
  const Form19 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('No');
+     const{Doyoucurrentlyhaveafinancialadvisor}=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('No');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -23,10 +25,10 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">Do you currently have a financial advisor?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Do you currently have a financial advisor?"
-                name="Do you currently have a financial advisor?" 
-                value={value} 
-                onChange={handleChange}>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you currently have a financial advisor?"
+                name="Doyoucurrentlyhaveafinancialadvisor" 
+                value={Doyoucurrentlyhaveafinancialadvisor} 
+                onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}  
                     value="No"

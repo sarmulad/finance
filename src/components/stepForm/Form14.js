@@ -12,11 +12,13 @@ import useStyles from './styles.js'
 
  const Form14 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('Yes');
+     const{Doyouhavea401k}=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('Yes');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -24,10 +26,10 @@ import useStyles from './styles.js'
                 <h3 className= {classes.title}>Find Your Advisor Match</h3>
                 <FormControl component="fieldset" style={{width:'100%'}}>
                     <Typography variant="h5">Do you have a 401k?</Typography>
-                    <RadioGroup style={{paddingLeft:'10px'}} aria-label="Do you have a 401k?"
-                        name="Do you have a 401k?" 
-                        value={value} 
-                        onChange={handleChange}>
+                    <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you have a 401k?"
+                        name="Doyouhavea401k" 
+                        value={Doyouhavea401k} 
+                        onChange={setForm}>
                         <FormControlLabel
                         className={classes.formControl}
                             value="Yes"

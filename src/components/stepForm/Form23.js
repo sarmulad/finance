@@ -11,11 +11,13 @@ import useStyles from './styles.js'
 
  const Form23 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('Less than $40,000');
+     const{PleaseEstimateYourHouseholdIncome }=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('Less than $40,000');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -23,10 +25,10 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">Please estimate your household income.</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Please estimate your household income."
-                name="Please estimate your household income." 
-                value={value} 
-                onChange={handleChange}>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Please estimate your household income."
+                name="PleaseEstimateYourHouseholdIncome" 
+                value={PleaseEstimateYourHouseholdIncome} 
+                onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}   
                     value="Less than $40,000"

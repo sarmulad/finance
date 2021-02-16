@@ -12,22 +12,24 @@ import useStyles from './styles.js'
 
  const Form21 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('No');
+     const{DoYouNeedyourfinancialadvisortobeinYourImmediateArea }=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('No');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
         <Container maxWidth='xs' className= {classes.form}>
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">Do you currently have a financial advisor?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Do you currently have a financial advisor?"
-                name="Do you currently have a financial advisor?" 
-                value={value} 
-                onChange={handleChange}>
+            <Typography variant="h5">Do you need your financial advisor to be in your immediate area?</Typography>
+            <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label="DoYouNeedyourfinancialadvisortobeinYourImmediateArea?"
+                name="DoYouNeedyourfinancialadvisortobeinYourImmediateArea" 
+                value={DoYouNeedyourfinancialadvisortobeinYourImmediateArea} 
+                onChange={setForm}>
                 <FormControlLabel
                     className={classes.formControl} 
                     value="No"

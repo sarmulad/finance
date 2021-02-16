@@ -12,11 +12,13 @@ import useStyles from './styles.js'
  const OptionalQuestion1 = ({formData, navigation, setForm}) => {
 
      const classes =useStyles();
-     const [value, setValue] = React.useState('Separately');
+     const{Areyousavingjointlyorseparately }=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('Separately');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -24,8 +26,8 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">Are you saving jointly or separately?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Are you married ?
-            " name="Are you saving jointly or separately?" value={value} onChange={handleChange}>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you married ?
+            " name="Areyousavingjointlyorseparately" value={Areyousavingjointlyorseparately} onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}  
                  value="Separately"

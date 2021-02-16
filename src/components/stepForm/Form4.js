@@ -12,11 +12,12 @@ import useStyles from './styles.js'
 
  const Form4 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('1-4 years');
+     const{ Whatactivityismostimportanttoyouinretirement}=formData
+    //  const [value, setValue] = React.useState('1-4 years');
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -24,7 +25,7 @@ import useStyles from './styles.js'
             <h3 className= {classes.title}>Find Your Advisor Match</h3>
             <FormControl component="fieldset" style={{width:'100%'}}>
                 <Typography variant="h5">What activity is most important to you in retirement?</Typography>
-                <RadioGroup style={{paddingLeft:'10px'}} aria-label=" What activity is most important to you in retirement?" name="What activity is most important to you in retirement?" value={value} onChange={handleChange}>
+                <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label=" What activity is most important to you in retirement?" name="Whatactivityismostimportanttoyouinretirement" value={Whatactivityismostimportanttoyouinretirement} onChange={setForm}>
                     <FormControlLabel
                     className={classes.formControl}  
                      value="Traveling" control={<Radio color='black'/>} 

@@ -9,21 +9,23 @@ import useStyles from './styles.js'
 
  const Form20= ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('');
+     const{ZipCode }=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
         <Container maxWidth='xs' className= {classes.form}>
             <h3 className= {classes.title}>Find Your Advisor Match</h3>
-                <Typography variant='h4'>Where are you located ? </Typography>
+                <Typography  controlled="true" variant='h4'>Where are you located ? </Typography>
                 <input type='text' placeholder='Zip code (e.g 90210)'
-                    name='zip code'
-                    onChange = {handleChange}
-                    value = {value}
+                    name='ZipCode'
+                    onChange = {setForm}
+                    value = {ZipCode}
                     style={{border:'1px solid black', padding:'15px',margin:'50px 0px 150px 0px', width:'90%',outline:'none'}}
                 />
                

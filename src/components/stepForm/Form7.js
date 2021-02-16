@@ -11,11 +11,14 @@ import useStyles from './styles.js'
 
  const Form7 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('Excellent');
+     const{Howwouldyoucharacterizeyouroverallhealth}=formData
+     
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('Excellent');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -23,7 +26,7 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">How would you characterize your overall health?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="How would you characterize your overall health? " name="How would you characterize your overall health?" value={value} onChange={handleChange}>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How would you characterize your overall health? " name="Howwouldyoucharacterizeyouroverallhealth" value={Howwouldyoucharacterizeyouroverallhealth} onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}
                  value="Excellent" control={<Radio color='black' />} 

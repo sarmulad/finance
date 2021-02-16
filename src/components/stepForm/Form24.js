@@ -11,11 +11,13 @@ import useStyles from './styles.js'
 
  const Form24 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('');
+     const{Pleaseestimateyourtotalinvestableassets }=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -23,10 +25,10 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">Please estimate your total investable assets.</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Please estimate your total investable assets.."
-                name="Please estimate your total investable assets.." 
-                value={value} 
-                onChange={handleChange}>
+            <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label="Please estimate your total investable assets.."
+                name="Pleaseestimateyourtotalinvestableassets" 
+                value={Pleaseestimateyourtotalinvestableassets} 
+                onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}   
                     value="Less than $25,000"

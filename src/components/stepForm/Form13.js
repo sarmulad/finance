@@ -12,11 +12,13 @@ import useStyles from './styles.js'
 
  const Form13= ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState(' Doing nothing / staying the coursething / staying the course');
+     const{ImrespondingtotheimpactoftheCoronavirusby}=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState(' Doing nothing / staying the coursething / staying the course');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -24,8 +26,8 @@ import useStyles from './styles.js'
                 <h3 className= {classes.title}>Find Your Advisor Match</h3>
                 <FormControl component="fieldset" style={{width:'100%'}}>
                     <Typography variant="h5">I'm responding to the impact of the Coronavirus by:</Typography>
-                    <RadioGroup style={{paddingLeft:'10px'}} aria-label="I'm responding to the impact of the Coronavirus by:  
-                    " name="I'm responding to the impact of the Coronavirus by:" value={value} onChange={handleChange}>
+                    <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="I'm responding to the impact of the Coronavirus by:  
+                    " name="ImrespondingtotheimpactoftheCoronavirusby" value={ImrespondingtotheimpactoftheCoronavirusby} onChange={setForm}>
                         <FormControlLabel
                         className={classes.formControl}
                             value="Doing nothing / staying the course"

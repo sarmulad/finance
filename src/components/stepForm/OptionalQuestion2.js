@@ -12,11 +12,13 @@ import useStyles from './styles.js'
  const OptionalQuestion2 = ({formData, navigation, setForm}) => {
 
      const classes =useStyles();
-     const [value, setValue] = React.useState('No');
+     const{Haveyourefinancedyourhomerecently }=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('No');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -24,8 +26,8 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">Have you refinanced your home recently to take advantage of low interest rates?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Are you married ?
-            " name="Have you refinanced your home recently to take advantage of low interest rates?" value={value} onChange={handleChange}>
+            <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label="Are you married ?
+            " name="Haveyourefinancedyourhomerecently" value={Haveyourefinancedyourhomerecently} onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}  
                  value="No"

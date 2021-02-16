@@ -11,11 +11,13 @@ import useStyles from './styles.js'
 
  const Form17 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('Tax expertise');
+     const{importantForAFinancialAdvisor}=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('Tax expertise');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -23,10 +25,10 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">Which of these is most important for your financial advisor to have?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Which of these is most important for your financial advisor to have?"
-                name="Which of these is most important for your financial advisor to have?" 
-                value={value} 
-                onChange={handleChange}>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Which of these is most important for your financial advisor to have?"
+                name="importantForAFinancialAdvisor" 
+                value={importantForAFinancialAdvisor} 
+                onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl} 
                     value="Tax expertise"

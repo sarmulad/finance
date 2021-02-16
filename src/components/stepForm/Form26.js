@@ -12,11 +12,13 @@ import useStyles from './styles.js'
 
  const Form24 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('Internet search');
+     const{Howdidyouhearaboutus }=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('Internet search');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -24,10 +26,10 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">How did you hear about us?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="How did you hear about us?."
-                name="How did you hear about us?." 
-                value={value} 
-                onChange={handleChange}>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How did you hear about us?."
+                name="Howdidyouhearaboutus" 
+                value={Howdidyouhearaboutus} 
+                onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}   
                     value=" Internet search"

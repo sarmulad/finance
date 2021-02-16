@@ -12,20 +12,22 @@ import useStyles from './styles.js'
  const OptionalQuestion3 = ({formData, navigation, setForm}) => {
 
      const classes =useStyles();
-     const [value, setValue] = React.useState('I’m unsatisfied with my current advisor');
+     const{Whyareyoulookingforanewone }=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('I’m unsatisfied with my current advisor');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
         <Container maxWidth='xs' className= {classes.form}>
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
-        <FormControl component="fieldset" style={{width:'100%'}}>
+        <FormControl  controlled="true" component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">Why are you looking for a new one?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Are you married ?
-            " name="Why are you looking for a new one?" value={value} onChange={handleChange}>
+            <RadioGroup  style={{paddingLeft:'10px'}} aria-label="Are you married ?
+            " name="Whyareyoulookingforanewone?" value={Whyareyoulookingforanewone} onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}  
                  value="I’m unsatisfied with my current advisor"

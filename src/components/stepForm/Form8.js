@@ -11,11 +11,14 @@ import useStyles from './styles.js'
 
  const Form8= ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('Very comfortable');
+     const{Howcomfortableareyouwithinvesting}=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+
+    //  const [value, setValue] = React.useState('Very comfortable');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -23,7 +26,7 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">How comfortable are you with investing?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="How comfortable are you with investing? " name="How comfortable are you with investing?" value={value} onChange={handleChange}>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How comfortable are you with investing? " name="Howcomfortableareyouwithinvesting" value={Howcomfortableareyouwithinvesting} onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}
                  value="Very comfortable"

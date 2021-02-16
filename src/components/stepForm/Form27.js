@@ -10,21 +10,24 @@ import useStyles from './styles.js'
 
  const Form20= ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('');
+     const{messagetomatch }=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+
+    //  const [value, setValue] = React.useState('');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
         <Container maxWidth='xs' className= {classes.form}>
             <h3 className= {classes.title}>Find Your Advisor Match</h3>
-                <Typography variant='h4'>Is there anything else you'd like your matches to know? (optional) </Typography>
+                <Typography  controlled="true" variant='h4'>Is there anything else you'd like your matches to know? (optional) </Typography>
                 <input type='text' 
-                    name='message to match'
-                    onChange = {handleChange}
-                    value = {value}
+                    name='messagetomatch'
+                    onChange = {messagetomatch}
+                    value = {setForm}
                     style={{border:'1px solid black', padding:'15px',margin:'50px 0px 150px 0px', width:'90%',outline:'none'}}
                 />
                

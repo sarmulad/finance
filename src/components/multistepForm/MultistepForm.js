@@ -1,8 +1,8 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {useForm, useStep} from 'react-hooks-helper'
-import Form from '../stepForm/Forms'
-import SecondForm from '../stepForm/SecondForm'
-import ThirdForm from '../stepForm/ThirdForm'
+import Form1 from '../stepForm/Form1'
+import Form2 from '../stepForm/Form2'
+import Form3 from '../stepForm/Form3'
 import Form4 from '../stepForm/Form4'
 import Form5 from '../stepForm/Form5'
 import Form6 from '../stepForm/Form6'
@@ -21,7 +21,7 @@ import Form18 from '../stepForm/Form18'
 import Form19 from '../stepForm/Form19'
 import Form20 from '../stepForm/Form20'
 import Form21 from '../stepForm/Form21'
-import Form22 from '../stepForm/Form22'
+// import Form22 from '../stepForm/Form22'
 import Form23 from '../stepForm/Form23'
 import Form24 from '../stepForm/Form24'
 import Form25 from '../stepForm/Form25'
@@ -38,22 +38,41 @@ import  OptionalQuestion3   from    '../stepForm/OptionalQuestion3'
 
 
 const defaultData ={
-   LOfConfidence:'',
-   2:'',
-   3:'',
-   4:'',
-   5:'',
-   6:'',
-   7:'',
-   8:'',
-   9:'',
-   10:'',
-  
+   levelOfConfidence:'',
+   retirementTime:'',
+   Howdoyoucurrentlymanageyourmoney:'',
+   Whatactivityismostimportanttoyouinretirement:'',
+   Whichwordmostaccuratelydescribesyourvisionofretirement:'',
+   Wheredoyouexpectthemajorityofyourretirementincometocomefrom:'',
+   Howwouldyoucharacterizeyouroverallhealth:'',
+   Howcomfortableareyouwithinvesting:'',
+   Areyoumarried:'',
+   Doyouownahome:'',
+   Doyoucurrentlyhavechildrenunder18:'',
+   Doyouownabusiness:'',
+   ImrespondingtotheimpactoftheCoronavirusby:'',
+   Doyouhavea401k:'',
+   DoyouhaveanIRA:'',
+   Doyouhaveanemergencyfund:'',
+   importantForAFinancialAdvisor:'',
+   Issociallyresponsibleinvestingimportanttoyou:'',
+   Doyoucurrentlyhaveafinancialadvisor:'',
+   ZipCode:'',
+   DoYouNeedyourfinancialadvisortobeinYourImmediateArea:'',
+   PleaseEstimateYourHouseholdIncome:'',
+   Pleaseestimateyourtotalinvestableassets:'',
+   Pleaseestimateyourcurrentmonthlysavings:'',
+   Howdidyouhearaboutus:'',
+   messagetomatch:'',
 
-
+// optional questions
+   Areyousavingjointlyorseparately:'',
+   Whyareyoulookingforanewone:'',
+   Haveyourefinancedyourhomerecently:''
 };
 
-console.log(defaultData.LOfConfidence)
+
+//  console.log(defaultData)
  
 
 const steps = [
@@ -85,6 +104,10 @@ const steps = [
     {id:26},
     {id:27},
     {id:28},
+    {id:29},
+    {id:30},
+
+    
 
 
 
@@ -92,8 +115,11 @@ const steps = [
 
 
 const MultistepForm = () => {
+    // const [ marriedStatus, setMarriedStatus]= useState(true)
 
     const [formData, setForm]= useForm(defaultData)
+
+    console.log(formData)
     const {step, navigation} = useStep({
         steps,
         initialStep: 0
@@ -102,11 +128,11 @@ const MultistepForm = () => {
 
         switch (step.id){
             case 1 : 
-            return <Form {...props}/>;
+            return <Form1 {...props}/>;
             case 2 : 
-            return <SecondForm {...props}/>;
+            return <Form2 {...props}/>;
             case 3 : 
-            return <ThirdForm {...props}/>;
+            return <Form3 {...props}/>;
             case 4 : 
             return <Form4 {...props}/>;
             case 5 : 
@@ -118,9 +144,9 @@ const MultistepForm = () => {
             case 8 : 
             return <Form8 {...props}/>;
             case 9 : 
-            return <Form9 {...props}/>;
-            case 10 : 
-            return <OptionalQuestion1 {...props}/>;
+            return <Form9 {...props}  />;
+            case 10  : 
+            return  <OptionalQuestion1 {...props}/>;
             case 11 : 
             return <Form10 {...props}/>;
             case 12 : 
@@ -150,18 +176,16 @@ const MultistepForm = () => {
             case 24 : 
             return <Form21 {...props}/>;
             case 25 : 
-            return <Form22 {...props}/>;
-            case 26 : 
             return <Form23 {...props}/>;
-            case 27 : 
+            case 26 : 
             return <Form24 {...props}/>;
-            case 28 : 
+            case 27 : 
             return <Form25 {...props}/>;
-             case 29 : 
+             case 28 : 
             return <Form26 {...props}/>;
-            case 30 : 
+            case 29 : 
             return <Form27 {...props}/>;
-            case 31:
+            case 30:
                 return <SucessPage/>
             default:
                 return (

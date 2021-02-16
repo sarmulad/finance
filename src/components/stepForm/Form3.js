@@ -10,13 +10,16 @@ import { Typography, Button } from '@material-ui/core';
 
 import useStyles from './styles.js'
 
- const ThirdForm = ({formData, navigation, setForm}) => {
+ const Form3 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('I manage my own investments');
+     const {Howdoyoucurrentlymanageyourmoney} =formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+
+    //  const [value, setValue] = React.useState('I manage my own investments');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -24,7 +27,7 @@ import useStyles from './styles.js'
             <h3 className= {classes.title}>Find Your Advisor Match</h3>
             <FormControl component="fieldset" style={{width:'100%'}}>
                 <Typography variant="h5">How do you currently manage your money?</Typography>
-                <RadioGroup style={{paddingLeft:'10px'}} aria-label="How do you currently manage your money?" name="How do you currently manage your money?" value={value} onChange={handleChange}>
+                <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How do you currently manage your money?" name="Howdoyoucurrentlymanageyourmoney" value={Howdoyoucurrentlymanageyourmoney} onChange={setForm}>
                     <FormControlLabel className={classes.formControl}  value="I manage my own investments" control={<Radio color='black' />} label="I manage my own investments" />
                     <FormControlLabel className={classes.formControl} value="I use retirement plans (such as a 401(k), Roth IRA, IRA)" control={<Radio color='black'/>} label="I use retirement plans (such as a 401(k), Roth IRA, IRA)" />
                     <FormControlLabel className={classes.formControl} value="I use a robo-advisor" control={<Radio color='black'/>} label="I use a robo-advisor" />
@@ -54,4 +57,4 @@ import useStyles from './styles.js'
     )
 }
 
-export default ThirdForm
+export default Form3

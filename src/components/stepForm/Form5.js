@@ -11,11 +11,14 @@ import useStyles from './styles.js'
 
  const Form5 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('Enjoyment');
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+     const{ Whichwordmostaccuratelydescribesyourvisionofretirement}=formData
+
+    //  const [value, setValue] = React.useState('Enjoyment');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -25,11 +28,11 @@ import useStyles from './styles.js'
                 <Typography 
                 variant="h5">What activity is most important to you in retirement?
                 </Typography>
-                <RadioGroup style={{paddingLeft:'10px'}}
+                <RadioGroup  controlled="true" style={{paddingLeft:'10px'}}
                  aria-label=" Which word most accurately describes your vision of retirement?"
-                  name="Which word most accurately describes your vision of retirement?"
-                   value={value} 
-                   onChange={handleChange}>
+                  name="Whichwordmostaccuratelydescribesyourvisionofretirement"
+                   value={Whichwordmostaccuratelydescribesyourvisionofretirement} 
+                   onChange={setForm}>
                     <FormControlLabel
                     className={classes.formControl} 
                      value="Enjoyment" control={<Radio color='black'/>} 

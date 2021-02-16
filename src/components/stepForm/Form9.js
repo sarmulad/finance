@@ -11,11 +11,14 @@ import useStyles from './styles.js'
 
  const Form9 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('No');
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+     const{Areyoumarried}=formData
+
+    //  const [value, setValue] = React.useState('No');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -23,8 +26,7 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">Are you married?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Are you married ?
-            " name="Are you married?" value={value} onChange={handleChange}>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you married ?" name="Areyoumarried" value={Areyoumarried} onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}  
                  value="No"
@@ -33,6 +35,7 @@ import useStyles from './styles.js'
                 <FormControlLabel 
                 className={classes.formControl}
                  value="Yes" 
+
                  control={<Radio color='black'/>} 
                  label="Yes" />
                 

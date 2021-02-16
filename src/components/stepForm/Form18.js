@@ -11,11 +11,13 @@ import useStyles from './styles.js'
 
  const Form18 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
-     const [value, setValue] = React.useState('Must have');
+     const{Issociallyresponsibleinvestingimportanttoyou}=formData
 
-     const handleChange = (event) => {
-       setValue(event.target.value);
-     };
+    //  const [value, setValue] = React.useState('Must have');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
 
 
     return (
@@ -23,10 +25,10 @@ import useStyles from './styles.js'
         <h3 className= {classes.title}>Find Your Advisor Match</h3>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5">Is socially responsible investing important to you?</Typography>
-            <RadioGroup style={{paddingLeft:'10px'}} aria-label="Is socially responsible investing important to you?"
-                name="Is socially responsible investing important to you?" 
-                value={value} 
-                onChange={handleChange}>
+            <RadioGroup   controlled="true" style={{paddingLeft:'10px'}} aria-label="Is socially responsible investing important to you?"
+                name="Issociallyresponsibleinvestingimportanttoyou" 
+                value={Issociallyresponsibleinvestingimportanttoyou} 
+                onChange={setForm}>
                 <FormControlLabel
                 className={classes.formControl}   
                     value="Must have"
