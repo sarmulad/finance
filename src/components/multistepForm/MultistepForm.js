@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import {useForm, useStep} from 'react-hooks-helper'
+import axios from 'axios'
 import Form1 from '../stepForm/Form1'
 import Form2 from '../stepForm/Form2'
 import Form3 from '../stepForm/Form3'
@@ -124,6 +125,18 @@ const MultistepForm = () => {
         steps,
         initialStep: 0
     })
+
+    const submitData = (e) => {
+        e.preventDefault()
+        axios.post(
+            'https://hooks.zapier.com/hooks/catch/1451168/opnpfmt/', {formData}
+        )
+        console.log(formData)
+        // .catch(err, )
+    }
+
+    
+
     const props = {formData, setForm, navigation}
 
         switch (step.id){
@@ -145,7 +158,7 @@ const MultistepForm = () => {
             return <Form8 {...props}/>;
             case 9 : 
             return <Form9 {...props}  />;
-            case 10  : 
+            case 10 : 
             return  <OptionalQuestion1 {...props}/>;
             case 11 : 
             return <Form10 {...props}/>;
@@ -185,7 +198,7 @@ const MultistepForm = () => {
             return <Form26 {...props}/>;
             case 29 : 
             return <Form27 {...props}/>;
-            case 30:
+            case 30 :
                 return <SucessPage/>
             default:
                 return (

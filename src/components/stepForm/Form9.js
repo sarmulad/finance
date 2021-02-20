@@ -12,13 +12,22 @@ import useStyles from './styles.js'
  const Form9 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
 
-     const{Areyoumarried}=formData
+     const {Areyoumarried} =formData
 
     //  const [value, setValue] = React.useState('No');
 
     //  const handleChange = (event) => {
     //    setValue(event.target.value);
     //  };
+    const marriagestatus =() => {
+        let status = ''
+        if (formData.Areyoumarried == "Yes") {
+            let status = navigation.next()
+        } else {
+            let status = navigation.go(10)
+        }
+        return status
+    }
 
 
     return (
@@ -38,7 +47,6 @@ import useStyles from './styles.js'
 
                  control={<Radio color='black'/>} 
                  label="Yes" />
-                
             </RadioGroup>
          <div >
             <Button 
@@ -52,8 +60,7 @@ import useStyles from './styles.js'
             variant='contained'
             color='secondary' 
             style={{marginTop:'1rem'}}
-            onClick ={()=>
-                navigation.next()}>
+            onClick ={()=>marriagestatus()}>
             Next
             </Button>
          </div>

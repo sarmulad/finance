@@ -13,12 +13,17 @@ import useStyles from './styles.js'
  const Form10 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
      const{Doyouownahome}=formData
-    //  const [value, setValue] = React.useState('No');
-
-    //  const handleChange = (event) => {
-    //    setValue(event.target.value);
-    //  };
-
+     
+     const homeOwnership =() => {
+        let status = ''
+        if (formData.Doyouownahome == "Yes") {
+            let status = navigation.next()
+        } else {
+            let status = navigation.go(12)
+        }
+        return status
+        // console.log(status)
+    }
 
     return (
         <Container maxWidth='xs' className= {classes.form}>
@@ -43,14 +48,14 @@ import useStyles from './styles.js'
                 variant='contained'
                 color='primary' 
                 style={{marginTop:'1rem', marginRight:'3rem'}}
-                onClick ={()=>navigation.previous()}>
+                onClick ={()=> navigation.go(10)}>
                     Back
                 </Button>
                 <Button 
                 variant='contained'
                 color='secondary' 
                 style={{marginTop:'1rem'}}
-                onClick ={()=>navigation.next()}>
+                onClick ={()=>homeOwnership()}>
                 Next
                 </Button>
             </div>

@@ -46,7 +46,7 @@ import useStyles from './styles.js'
             variant='contained'
             color='primary' 
             style={{marginTop:'1rem', marginRight:'3rem'}}
-            onClick ={()=>navigation.previous()}>
+            onClick ={()=> navigation.go(10)}>
                 Back
             </Button>
             <Button 
