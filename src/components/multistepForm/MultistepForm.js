@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import {useForm, useStep} from 'react-hooks-helper'
-import axios from 'axios'
 import Form1 from '../stepForm/Form1'
 import Form2 from '../stepForm/Form2'
 import Form3 from '../stepForm/Form3'
@@ -126,14 +125,7 @@ const MultistepForm = () => {
         initialStep: 0
     })
 
-    const submitData = (e) => {
-        e.preventDefault()
-        axios.post(
-            'https://hooks.zapier.com/hooks/catch/1451168/opnpfmt/', {formData}
-        )
-        console.log(formData)
-        // .catch(err, )
-    }
+    
 
     
 
