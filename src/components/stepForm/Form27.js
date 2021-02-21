@@ -1,7 +1,8 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 // import TextField from '@material-ui/core/TextField';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 import axios from 'axios'
 
 import { Typography, Button } from '@material-ui/core';
@@ -35,8 +36,8 @@ import useStyles from './styles.js'
     }
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-            <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
                 <Typography  controlled="true" variant='h4'>Is there anything else you'd like your matches to know? (optional) </Typography>
                 <input type='text' 
                     name='messagetomatch'

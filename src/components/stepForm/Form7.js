@@ -5,7 +5,8 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import useStyles from './styles.js'
 
@@ -22,27 +23,27 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-        <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+        <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">How would you characterize your overall health?</Typography>
+            <Typography variant="h5" className="question">How would you characterize your overall health?</Typography>
             <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How would you characterize your overall health? " name="Howwouldyoucharacterizeyouroverallhealth" value={Howwouldyoucharacterizeyouroverallhealth} onChange={setForm}>
                 <FormControlLabel
-                className={classes.formControl}
+                className="form-control"
                  value="Excellent" control={<Radio color='black' />} 
                  label="Excellent" />
                 <FormControlLabel 
-                className={classes.formControl} 
+                className="form-control" 
                  value="Good" 
                  control={<Radio color='black' />} 
                  label="Good" />
                 <FormControlLabel
-                className={classes.formControl}
+                className="form-control"
                  value="Fair" 
                  control={<Radio color='black' />}
                   label="Fair" />
                 <FormControlLabel 
-                className={classes.formControl}
+                className="form-control"
                 value="Poor" 
                  control={<Radio color='black' />} 
                  label=" Poor" />

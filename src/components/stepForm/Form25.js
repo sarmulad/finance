@@ -4,7 +4,8 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
@@ -22,47 +23,47 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-        <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+        <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">Please estimate your current monthly savings.</Typography>
+            <Typography variant="h5" className="question">Please estimate your current monthly savings.</Typography>
             <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Please estimate your current monthly savings.."
                 name="Pleaseestimateyourcurrentmonthlysavings" 
                 value={Pleaseestimateyourcurrentmonthlysavings} 
                 onChange={setForm}>
                 <FormControlLabel
-                className={classes.formControl}   
+                className="form-control"   
                     value="Less than $100"
                     control={<Radio color='black'/>} 
                     label="
                     Less than $100" />
 
                 <FormControlLabel 
-                className={classes.formControl}    
+                className="form-control"    
                     value="$100 - $249" 
                     control={<Radio  color='black'/>} 
                     label="$100 - $249" /> 
 
                 <FormControlLabel 
-                className={classes.formControl}   
-                    value="$250 - $499" 
+                className="form-control"   
+                    value="$250-$499" 
                     control={<Radio  color='black'/>} 
                     label="$250 - $499" /> 
 
                     <FormControlLabel 
-                    className={classes.formControl}   
+                    className="form-control"   
                     value="$500 - $999" 
                     control={<Radio color='black'/>} 
                     label="$500 - $999" /> 
 
                     <FormControlLabel 
-                    className={classes.formControl}    
+                    className="form-control"    
                     value="$1,000 - $1,999" 
                     control={<Radio color='black'/>} 
                     label="$1,000 - $1,999" /> 
 
                     <FormControlLabel 
-                    className={classes.formControl}   
+                    className="form-control"   
                     value="Over $2,000" 
                     control={<Radio color='black'/>} 
                     label="Over $2,000" /> 

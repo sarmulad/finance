@@ -4,7 +4,8 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
@@ -22,46 +23,46 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-        <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+        <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">How did you hear about us?</Typography>
+            <Typography variant="h5" className="question">How did you hear about us?</Typography>
             <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How did you hear about us?."
                 name="Howdidyouhearaboutus" 
                 value={Howdidyouhearaboutus} 
                 onChange={setForm}>
                 <FormControlLabel
-                className={classes.formControl}   
+                className="form-control"   
                     value=" Internet search"
                     control={<Radio color='black'/>} 
-                    label="Internet search" />
+                    label="Internetsearch" />
 
                 <FormControlLabel 
-                className={classes.formControl}   
+                className="form-control"   
                     value="Online ad" 
                     control={<Radio color='black'/>} 
                     label="Online ad" /> 
 
                 <FormControlLabel 
-                className={classes.formControl}   
+                className="form-control"   
                     value="TV or streaming video" 
                     control={<Radio color='black'/>} 
                     label="TV or streaming video" /> 
 
                     <FormControlLabel 
-                    className={classes.formControl}   
+                    className="form-control"   
                     value="Podcast" 
                     control={<Radio color='black'/>} 
                     label="Podcast" /> 
 
                     <FormControlLabel 
-                    className={classes.formControl}   
+                    className="form-control"   
                     value="Physical mail" 
                     control={<Radio color='black'/>} 
                     label="Physical mail" /> 
 
                     <FormControlLabel 
-                    className={classes.formControl}   
+                    className="form-control"   
                     value="Other" 
                     control={<Radio color='black'/>} 
                     label="Other" /> 

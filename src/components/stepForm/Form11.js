@@ -4,7 +4,8 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
@@ -22,29 +23,29 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-                <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+                <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
                 <FormControl component="fieldset" style={{width:'100%'}}>
-                    <Typography variant="h5">Do you currently have children under 18?</Typography>
+                    <Typography variant="h5" className="question">Do you currently have children under 18?</Typography>
                     <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you currently have children under 18?              
                     " name="Doyoucurrentlyhavechildrenunder18" value={Doyoucurrentlyhavechildrenunder18} onChange={setForm}>
                         <FormControlLabel
-                        className={classes.formControl}  
+                        className="form-control"  
                             value="No"
                             control={<Radio color='black'/>} 
                             label="No" />
                         <FormControlLabel 
-                        className={classes.formControl}
-                            value="Yes, 1" 
+                        className="form-control"
+                            value="Yes,1" 
                             control={<Radio color='black'/>} 
                             label="Yes, 1" /> 
                         <FormControlLabel 
-                        className={classes.formControl}
+                        className="form-control"
                             value="Yes, 2" 
                             control={<Radio color='black'/>} 
                             label="Yes , 2" />
                         <FormControlLabel 
-                        className={classes.formControl}
+                        className="form-control"
                             value="Yes, 3 or more" 
                             control={<Radio color='black' />} 
                             label="Yes , 3 or more" />

@@ -5,7 +5,8 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import useStyles from './styles.js'
 
@@ -22,24 +23,24 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-        <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+        <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">Are you saving jointly or separately?</Typography>
+            <Typography variant="h5" className="question">Are you saving jointly or separately?</Typography>
             <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you married ?
             " name="Areyousavingjointlyorseparately" value={Areyousavingjointlyorseparately} onChange={setForm}>
                 <FormControlLabel
-                className={classes.formControl}  
+                className="form-control"  
                  value="Separately"
                   control={<Radio color='black'/>} 
                  label="Separately" />
                 <FormControlLabel 
-                className={classes.formControl}
+                className="form-control"
                  value="Jointly" 
                  control={<Radio color='black'/>} 
                  label="Jointly" />
                  <FormControlLabel 
-                className={classes.formControl}
+                className="form-control"
                  value="Not Applicable" 
                  control={<Radio color='black'/>} 
                  label="Not Applicable" />

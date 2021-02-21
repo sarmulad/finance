@@ -5,7 +5,8 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import useStyles from './styles.js'
 
@@ -31,18 +32,18 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-        <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+        <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5">Are you married?</Typography>
+            <Typography variant="h5" className="question">Are you married?</Typography>
             <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you married ?" name="Areyoumarried" value={Areyoumarried} onChange={setForm}>
                 <FormControlLabel
-                className={classes.formControl}  
+                className="form-control"  
                  value="No"
                   control={<Radio color='black'/>} 
                  label="No" />
                 <FormControlLabel 
-                className={classes.formControl}
+                className="form-control"
                  value="Yes" 
 
                  control={<Radio color='black'/>} 

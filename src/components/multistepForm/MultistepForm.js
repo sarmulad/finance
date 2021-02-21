@@ -21,7 +21,6 @@ import Form18 from '../stepForm/Form18'
 import Form19 from '../stepForm/Form19'
 import Form20 from '../stepForm/Form20'
 import Form21 from '../stepForm/Form21'
-// import Form22 from '../stepForm/Form22'
 import Form23 from '../stepForm/Form23'
 import Form24 from '../stepForm/Form24'
 import Form25 from '../stepForm/Form25'
@@ -38,37 +37,37 @@ import  OptionalQuestion3   from    '../stepForm/OptionalQuestion3'
 
 
 const defaultData ={
-   levelOfConfidence:'',
-   retirementTime:'',
-   Howdoyoucurrentlymanageyourmoney:'',
-   Whatactivityismostimportanttoyouinretirement:'',
-   Whichwordmostaccuratelydescribesyourvisionofretirement:'',
-   Wheredoyouexpectthemajorityofyourretirementincometocomefrom:'',
-   Howwouldyoucharacterizeyouroverallhealth:'',
-   Howcomfortableareyouwithinvesting:'',
-   Areyoumarried:'',
-   Doyouownahome:'',
-   Doyoucurrentlyhavechildrenunder18:'',
-   Doyouownabusiness:'',
-   ImrespondingtotheimpactoftheCoronavirusby:'',
-   Doyouhavea401k:'',
-   DoyouhaveanIRA:'',
-   Doyouhaveanemergencyfund:'',
-   importantForAFinancialAdvisor:'',
-   Issociallyresponsibleinvestingimportanttoyou:'',
-   Doyoucurrentlyhaveafinancialadvisor:'',
+   levelOfConfidence:'Notconfident',
+   retirementTime:'1-4years',
+   Howdoyoucurrentlymanageyourmoney:'Imanagemyowninvestments',
+   Whatactivityismostimportanttoyouinretirement:'Traveling',
+   Whichwordmostaccuratelydescribesyourvisionofretirement:'Enjoyment',
+   Wheredoyouexpectthemajorityofyourretirementincometocomefrom:'Employer',
+   Howwouldyoucharacterizeyouroverallhealth:'Excellent',
+   Howcomfortableareyouwithinvesting:'Verycomfortable',
+   Areyoumarried:'Yes',
+   Doyouownahome:'Yes',
+   Doyoucurrentlyhavechildrenunder18:'Yes,1',
+   Doyouownabusiness:'No',
+   ImrespondingtotheimpactoftheCoronavirusby:'Doingnothing',
+   Doyouhavea401k:'No',
+   DoyouhaveanIRA:'No',
+   Doyouhaveanemergencyfund:'Yes',
+   importantForAFinancialAdvisor:'Taxexpertise',
+   Issociallyresponsibleinvestingimportanttoyou:'Musthave',
+   Doyoucurrentlyhaveafinancialadvisor:'No',
    ZipCode:'',
-   DoYouNeedyourfinancialadvisortobeinYourImmediateArea:'',
-   PleaseEstimateYourHouseholdIncome:'',
-   Pleaseestimateyourtotalinvestableassets:'',
-   Pleaseestimateyourcurrentmonthlysavings:'',
-   Howdidyouhearaboutus:'',
+   DoYouNeedyourfinancialadvisortobeinYourImmediateArea:'No',
+   PleaseEstimateYourHouseholdIncome:'Lessthan$40,000',
+   Pleaseestimateyourtotalinvestableassets:'$25,000-$99,999',
+   Pleaseestimateyourcurrentmonthlysavings:'$250-$499',
+   Howdidyouhearaboutus:'Internetsearch',
    messagetomatch:'',
 
 // optional questions
-   Areyousavingjointlyorseparately:'',
-   Whyareyoulookingforanewone:'',
-   Haveyourefinancedyourhomerecently:''
+   Areyousavingjointlyorseparately:'separately',
+   Whyareyoulookingforanewone:'Other',
+   Haveyourefinancedyourhomerecently:'No'
 };
 
 

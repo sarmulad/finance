@@ -1,5 +1,5 @@
 .background{
-    background: url('./images/background.jpg');
+    background: red;
     background-position: center;
     background-size: cover;
     min-height: 100vh;

@@ -4,9 +4,9 @@
     display:grid;
     justify-content: space-between;
     align-items: space-between;
-    background-color: grey;
+    background-color: #000;
     width: 100%;
-    margin-top: 10px ;
+    margin-top: 50px ;
     padding: 50px;
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
@@ -25,5 +25,5 @@
     text-transform: uppercase;
 }
 .footer a:hover{
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }

@@ -4,7 +4,8 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
@@ -23,16 +24,16 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-            <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
             <FormControl component="fieldset" style={{width:'100%'}}>
-                <Typography variant="h5">How do you currently manage your money?</Typography>
+                <Typography variant="h5" className="question">How do you currently manage your money?</Typography>
                 <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How do you currently manage your money?" name="Howdoyoucurrentlymanageyourmoney" value={Howdoyoucurrentlymanageyourmoney} onChange={setForm}>
-                    <FormControlLabel className={classes.formControl}  value="I manage my own investments" control={<Radio color='black' />} label="I manage my own investments" />
-                    <FormControlLabel className={classes.formControl} value="I use retirement plans (such as a 401(k), Roth IRA, IRA)" control={<Radio color='black'/>} label="I use retirement plans (such as a 401(k), Roth IRA, IRA)" />
-                    <FormControlLabel className={classes.formControl} value="I use a robo-advisor" control={<Radio color='black'/>} label="I use a robo-advisor" />
-                    <FormControlLabel className={classes.formControl} value=" I work with a financial advisor"  control={<Radio color='black'/>} label=" I work with a financial advisor" />
-                    <FormControlLabel className={classes.formControl} value="None of the above"  control={<Radio color='black' />} label=" None of the above" />
+                    <FormControlLabel className="form-control"  value="Imanagemyowninvestments" control={<Radio color='black' />} label="I manage my own investments" />
+                    <FormControlLabel className="form-control" value="I use retirement plans (such as a 401(k), Roth IRA, IRA)" control={<Radio color='black'/>} label="I use retirement plans (such as a 401(k), Roth IRA, IRA)" />
+                    <FormControlLabel className="form-control" value="I use a robo-advisor" control={<Radio color='black'/>} label="I use a robo-advisor" />
+                    <FormControlLabel className="form-control" value=" I work with a financial advisor"  control={<Radio color='black'/>} label=" I work with a financial advisor" />
+                    <FormControlLabel className="form-control" value="None of the above"  control={<Radio color='black' />} label=" None of the above" />
                 </RadioGroup>
              <div >
                 <Button 

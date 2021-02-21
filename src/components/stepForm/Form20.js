@@ -1,7 +1,8 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
@@ -19,8 +20,8 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-            <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
                 <Typography  controlled="true" variant='h4'>Where are you located ? </Typography>
                 <input type='text' placeholder='Zip code (e.g 90210)'
                     name='ZipCode'

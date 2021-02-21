@@ -3,14 +3,13 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles(()=>({
     form: {
        marginTop:'100px',
-       maxWidth:'80%',
+       maxWidth:'100vw',
        overflowX:'hidden',
        
     
     },
     title:{
         padding:'10px 0px',
-         
         textAlign:'center',
         backgroundColor:'#00a86b',
         color:'white'

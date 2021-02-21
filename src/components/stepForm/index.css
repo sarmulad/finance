@@ -1,0 +1,67 @@
+.question {
+    font-weight: bolder !important;
+    line-height: normal !important;
+    color: #000 !important;
+    margin-top: 2% !important;
+    margin-bottom: 2% !important;
+    font-size: 120% !important;
+}
+
+@media(max-width: 768px) {
+    .question {
+        margin-top: 5% !important;
+        margin-bottom: 5% !important;
+    }
+    .form {
+        margin-top: 100px;
+        background: #fff;
+        padding: 6% 3% 6% 3% !important;
+        margin: 100px 2%;
+
+    }
+}
+
+.makeStyles-formControl-6 {
+    border: none;
+}
+.form {
+    margin-top: 100px;
+    width: 60%;
+    background: #fff;
+    padding: 3%;
+    margin: 100px 2%;
+    /* height: 100vh; */
+    /* overflow: hidden; */
+}
+
+.form-control {
+    border:'1px solid #dee1e9';
+    margin-top:'5px';
+    border-radius: 10px;
+}
+
+@media (min-width: 0px) {
+    .MuiContainer-maxWidthXs {
+        width: 100% !important;
+    }
+}
+.banner {
+    padding:10px 0px;
+    text-align:center;
+    background-color:#00a86b;
+    color:white;
+}
+.back-button {
+    background-color:red;
+}
+.MuiButton-containedSecondary {
+    background-color:#3f51b5 !important;
+}
+
+.MuiButton-containedPrimary {
+    background-color:#ff0000 !important;
+}
+body {
+    /* background-color: purple !important; */
+    background: url('../../images/financial-advisor-bkgd.jpg') !important;
+}

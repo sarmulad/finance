@@ -5,7 +5,8 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import useStyles from './styles.js'
 
@@ -14,19 +15,11 @@ import useStyles from './styles.js'
 
      const{ Whichwordmostaccuratelydescribesyourvisionofretirement}=formData
 
-    //  const [value, setValue] = React.useState('Enjoyment');
-
-    //  const handleChange = (event) => {
-    //    setValue(event.target.value);
-    //  };
-
-
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-            <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
             <FormControl component="fieldset" style={{width:'100%'}}>
-                <Typography 
-                variant="h5">What activity is most important to you in retirement?
+                <Typography variant="h5" className="question">What activity is most important to you in retirement?
                 </Typography>
                 <RadioGroup  controlled="true" style={{paddingLeft:'10px'}}
                  aria-label=" Which word most accurately describes your vision of retirement?"
@@ -34,26 +27,26 @@ import useStyles from './styles.js'
                    value={Whichwordmostaccuratelydescribesyourvisionofretirement} 
                    onChange={setForm}>
                     <FormControlLabel
-                    className={classes.formControl} 
+                    className="form-control" 
                      value="Enjoyment" control={<Radio color='black'/>} 
                      label="Enjoyment" />
                     <FormControlLabel 
-                    className={classes.formControl}
+                    className="form-control"
                      value="Freedom" 
                      control={<Radio  color='black'/>} 
                      label="Freedom" />
                     <FormControlLabel
-                    className={classes.formControl} 
+                    className="form-control" 
                      value="Leisure" 
                      control={<Radio color='black'/>}
                       label="Leisure" />
                     <FormControlLabel 
-                    className={classes.formControl}
+                    className="form-control"
                     value=" Boredom   " 
                      control={<Radio  color='black'/>} 
                      label="  Boredom" />
                     <FormControlLabel 
-                    className={classes.formControl}
+                    className="form-control"
                      value="  Other" 
                       control={<Radio color='black'/>} 
                       label="  Others" />

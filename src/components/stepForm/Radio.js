@@ -15,7 +15,7 @@ export default function RadioButtonsGroup({navigation}) {
 
   return (
     <FormControl component="fieldset">
-      <Typography variant="h5">When would you like to retire?</Typography>
+      <Typography variant="h5" className="question">When would you like to retire?</Typography>
       <RadioGroup style={{paddingLeft:'10px'}} aria-label=" retirement time" name="retirement time" value={value} onChange={handleChange}>
         <FormControlLabel style={{border:'1px solid black', marginTop:'5px', borderRadius:'10px'}}  value="1-4 years" control={<Radio />} label="1-4 years" />
         <FormControlLabel style={{border:'1px solid black', marginTop:'5px',borderRadius:'10px'}} value="5-9 years" control={<Radio />} label="5-9 years" />

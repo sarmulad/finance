@@ -1,8 +1,9 @@
 body {
     
     padding: 40px 0;
-    background: #EBF0F5;
+    background: #fff;
     overflow-x: hidden;
+    margin-left: 0px;
   }
     h1 {
       color: #88B04B;

@@ -4,7 +4,8 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import Accordion from './Accordion'
+import Accordion from './Accordion' ;
+ import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
@@ -21,32 +22,32 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container maxWidth='xs' className= {classes.form}>
-            <h3 className= {classes.title}>Find Your Advisor Match</h3>
+        <Container  className= "form">
+            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
             <FormControl component="fieldset" style={{width:'100%'}}>
-                <Typography variant="h5">What activity is most important to you in retirement?</Typography>
+                <Typography variant="h5" className="question">What activity is most important to you in retirement?</Typography>
                 <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label=" What activity is most important to you in retirement?" name="Whatactivityismostimportanttoyouinretirement" value={Whatactivityismostimportanttoyouinretirement} onChange={setForm}>
                     <FormControlLabel
-                    className={classes.formControl}  
+                    className="form-control"  
                      value="Traveling" control={<Radio color='black'/>} 
                      label="Traveling" />
                     <FormControlLabel 
-                    className={classes.formControl}
+                    className="form-control"
                      value="Spending time with family and friends" 
                      control={<Radio color='black' />} 
                      label="Spending time with family and friends" />
                     <FormControlLabel
-                    className={classes.formControl}
+                    className="form-control"
                      value="Pursuing hobbies" 
                      control={<Radio  color='black'/>}
                       label="Pursuing hobbies" />
                     <FormControlLabel 
-                    className={classes.formControl}
+                    className="form-control"
                     value=" Working part-time" 
                      control={<Radio color='black' />} 
                      label="  Working part-time" />
                     <FormControlLabel 
-                    className={classes.formControl}
+                    className="form-control"
                      value="  Other" 
                       control={<Radio color='black' />} 
                       label="  Others" />
