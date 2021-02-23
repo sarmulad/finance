@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: space-between;
     background-color: #00a86b;
-    width: 100vw !important;
+    width: 100vw!important;
     margin-top: 50px ;
     padding: 50px;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
