@@ -23,9 +23,9 @@ import useStyles from './styles.js'
     const marriagestatus =() => {
         let status = ''
         if (formData.Areyoumarried == "Yes") {
-            let status = navigation.next()
+             status = navigation.next()
         } else {
-            let status = navigation.go(10)
+             status = navigation.go(10)
         }
         return status
     }

@@ -26,7 +26,10 @@ import Form24 from '../stepForm/Form24'
 import Form25 from '../stepForm/Form25'
 import Form26 from '../stepForm/Form26'
 import Form27 from '../stepForm/Form27'
-import SucessPage from '../stepForm/SucessPage'
+import Email from '../stepForm/Email'
+import Name from '../stepForm/Name'
+
+// import SucessPage from '../stepForm/SucessPage'
 import  OptionalQuestion1   from    '../stepForm/OptionalQuestion1'
 import  OptionalQuestion2   from    '../stepForm/OptionalQuestion2'
 import  OptionalQuestion3   from    '../stepForm/OptionalQuestion3'
@@ -61,14 +64,18 @@ const defaultData ={
    PleaseEstimateYourHouseholdIncome:'Lessthan$40,000',
    Pleaseestimateyourtotalinvestableassets:'$25,000-$99,999',
    Pleaseestimateyourcurrentmonthlysavings:'$250-$499',
-   Howdidyouhearaboutus:'Internetsearch',
-   messagetomatch:'',
+   Howdidyouhearaboutus:'TV',
+   messagetomatch: '',
+    Email:'',
+    FirstName:'',
+    LastName:'',
 
 // optional questions
    Areyousavingjointlyorseparately:'separately',
    Whyareyoulookingforanewone:'Other',
    Haveyourefinancedyourhomerecently:'No'
 };
+
 
 
 //  console.log(defaultData)
@@ -105,6 +112,7 @@ const steps = [
     {id:28},
     {id:29},
     {id:30},
+    {id:31},
 
     
 
@@ -117,8 +125,6 @@ const MultistepForm = () => {
     // const [ marriedStatus, setMarriedStatus]= useState(true)
 
     const [formData, setForm]= useForm(defaultData)
-
-    console.log(formData)
     const {step, navigation} = useStep({
         steps,
         initialStep: 0
@@ -189,8 +195,10 @@ const MultistepForm = () => {
             return <Form26 {...props}/>;
             case 29 : 
             return <Form27 {...props}/>;
-            case 30 :
-                return <SucessPage/>
+            case 30 : 
+            return <Email {...props}/>;
+            case 31 : 
+            return <Name {...props}/>;
             default:
                 return (
                     <div className='body'>

@@ -11,7 +11,7 @@ import { Typography, Button } from '@material-ui/core';
 
 import useStyles from './styles.js'
 
- const Form24 = ({formData, navigation, setForm}) => {
+ const Form25 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
      const{Pleaseestimateyourcurrentmonthlysavings}=formData
 
@@ -32,7 +32,7 @@ import useStyles from './styles.js'
                 value={Pleaseestimateyourcurrentmonthlysavings} 
                 onChange={setForm}>
                 <FormControlLabel
-                className="form-control"   
+                     className="form-control"   
                     value="Less than $100"
                     control={<Radio color='black'/>} 
                     label="
@@ -93,4 +93,4 @@ import useStyles from './styles.js'
     )
 }
 
-export default Form24
+export default Form25

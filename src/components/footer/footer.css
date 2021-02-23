@@ -4,11 +4,12 @@
     display:grid;
     justify-content: space-between;
     align-items: space-between;
-    background-color: #000;
-    width: 100%;
+    background-color: #00a86b;
+    width: 100vw !important;
     margin-top: 50px ;
     padding: 50px;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    margin-bottom: 0;
 }
 .footer div{
     display: flex;
@@ -23,7 +24,4 @@
     font-size: 15px;
     font-family: sans-serif;
     text-transform: uppercase;
-}
-.footer a:hover{
-    /* text-decoration: underline; */
 }
