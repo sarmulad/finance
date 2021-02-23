@@ -23,7 +23,7 @@ import useStyles from './styles.js'
 
 
     return (
-        <Container  className= "form">
+        <Container   className= "form">
         <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5" className="question">How comfortable are you with investing?</Typography>

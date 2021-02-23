@@ -9,10 +9,10 @@ import Accordion from './Accordion' ;
 
 import { Typography, Button } from '@material-ui/core';
 
-import useStyles from './styles.js'
 
- const Form24 = ({formData, navigation, setForm}) => {
-     const classes =useStyles();
+
+ const Form26 = ({formData, navigation, setForm}) => {
+    
      const{Howdidyouhearaboutus }=formData
 
     //  const [value, setValue] = React.useState('Internet search');
@@ -32,10 +32,10 @@ import useStyles from './styles.js'
                 value={Howdidyouhearaboutus} 
                 onChange={setForm}>
                 <FormControlLabel
-                className="form-control"   
+                    className="form-control"   
                     value=" Internet search"
                     control={<Radio color='black'/>} 
-                    label="Internetsearch" />
+                    label="Internet search" />
 
                 <FormControlLabel 
                 className="form-control"   
@@ -45,7 +45,7 @@ import useStyles from './styles.js'
 
                 <FormControlLabel 
                 className="form-control"   
-                    value="TV or streaming video" 
+                    value="TV" 
                     control={<Radio color='black'/>} 
                     label="TV or streaming video" /> 
 
@@ -92,4 +92,4 @@ import useStyles from './styles.js'
     )
 }
 
-export default Form24
+export default Form26

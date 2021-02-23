@@ -1,4 +1,4 @@
-import React , {useState}from 'react'
+import React from 'react'
 import './index.css';
 import Container from '@material-ui/core/Container'
 
@@ -15,17 +15,14 @@ import Accordion from './Accordion' ;
  const Form1 = ({formData, navigation, setForm}) => {
      const classes =useStyles();
      const{levelOfConfidence} = formData
-    const [formState, setFormState] = useState('very confident')
     
      
     return (
-        <Container className= "form">
+        <Container  className= "form">
 
             <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
             <FormControl   controlled="true" component="fieldset">
                 <Typography variant="h5" className="question">How confident are you in your long term financial plan?</Typography>
-                {/* <Typography variant='subtitle1' >Did you know that people who work with a financial advisor feel more
-               at ease about their finances... and end up with about 15% more money to spend in retirement on average</Typography> */}
                 <RadioGroup  controlled="true" controlled style={{paddingLeft:'10px'}} aria-label=" how confident are you" name='levelOfConfidence' value={levelOfConfidence} onChange={setForm}>
                   <FormControlLabel className="form-control"  value="Very confident" control={<Radio color='black' />} label="Very confident"  />
                   <FormControlLabel className="form-control" value="Somewhat confident" control={<Radio  color='black' />} label="Somewhat confident" />

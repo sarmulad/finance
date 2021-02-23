@@ -26,7 +26,6 @@
 }
 .form {
     margin-top: 100px;
-    width: 60%;
     background: #fff;
     padding: 3%;
     margin: 100px 2%;
@@ -55,13 +54,15 @@
     background-color:red;
 }
 .MuiButton-containedSecondary {
-    background-color:#3f51b5 !important;
+    background-color:black !important;
+    
 }
 
 .MuiButton-containedPrimary {
-    background-color:#ff0000 !important;
+    background-color:#00a86b !important;
 }
 body {
     /* background-color: purple !important; */
     background: url('../../images/financial-advisor-bkgd.jpg') !important;
+    margin: 0;
 }

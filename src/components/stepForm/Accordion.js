@@ -7,8 +7,8 @@ import { Typography } from '@material-ui/core'
 function Accordions() {
     return (
         
-            <Accordion  style={{marginTop:'10px', boxShadow:'none',backgroundColor:'#dee1e9'}}>
-                <AccordionSummary>
+            <Accordion  style={{marginTop:'10px', boxShadow:'none',backgroundColor:'#dee1e9',}}>
+                <AccordionSummary style={{width:'100% '}}>
                    <Typography variant='subtitle1'>Why do we need details?</Typography> 
                 </AccordionSummary>
                 <AccordionDetail>
