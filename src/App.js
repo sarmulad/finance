@@ -1,15 +1,18 @@
 import React from 'react'
 import Index from './pages/Index'
+import {Container} from '@material-ui/core'
 import {BrowserRouter, Route} from 'react-router-dom'
+import Footer from './components/footer/Footer'
 
 
 
 const App = () => {
     return (
         <BrowserRouter>
-        <div>
+        <Container maxWidth ='md'  >
         <Route exact path='/' component={Index}/> 
-        </div>
+        </Container>
+        <Footer/>
         </BrowserRouter>
     )
 }
