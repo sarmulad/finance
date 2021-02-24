@@ -4,10 +4,10 @@
     display:grid;
     justify-content: space-between;
     align-items: space-between;
-    background-color: #00a86b;
+    background-color: #111e6c;
     width: 100vw!important;
     margin-top: 50px ;
-    padding: 50px;
+    padding: 50px 30px;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     margin-bottom: 0;
     overflow-x: hidden;
@@ -17,6 +17,7 @@
     flex-direction: column;
     margin-bottom: 20px;
     
+    
 }
 .footer a{
     text-decoration: none;
@@ -24,5 +25,5 @@
     color: white;
     font-size: 15px;
     font-family: sans-serif;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }

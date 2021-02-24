@@ -13,30 +13,33 @@
         margin-bottom: 5% !important;
     }
     .form {
-        margin: 100px auto;
+        margin: 50px;
+        margin-bottom: 0px !important;
         background: #fff;
         padding: 6% 3% 6% 3% !important;
-        
-
     }
 }
+
+
+
 
 .makeStyles-formControl-6 {
     border: none;
 }
 .form {
-    margin-top: 100px;
-   
+    margin-top: 0px;
+    /* margin-bottom: 120px; */
     background: #fff;
-    padding: 3%;
-    margin: 100px 13% !important;
+    padding: 40px 30px !important;
+    /* margin: 100px 13% !important; */
      /* height: 700vh;  */
     /* overflow: hidden; */
 }
 
 .form-control {
-    border:'1px solid #dee1e9';
-    margin-top:'5px';
+    /* border:'1px solid #dee1e9'; */
+    margin-top:5px ;
+ 
     border-radius: 10px;
 }
 
@@ -47,6 +50,7 @@
 } */
 .banner {
     padding:10px 0px;
+    margin-bottom: 0px;
     text-align:center;
     background-color:#00a86b;
     color:white;
@@ -67,9 +71,9 @@ body {
     /* background-color: purple !important; */
     background: url('../../images/financial-advisor-bkgd.jpg') !important;
     overflow-x: hidden;
-    max-width:80%;
-    padding:auto;
-    margin: 0;
+    max-width:100%;
+    padding:auto; 
+    margin: auto;
    
 
 }

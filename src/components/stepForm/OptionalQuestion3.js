@@ -5,22 +5,14 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
-import Accordion from './Accordion' ;
  import './index.css';
 
-import useStyles from './styles.js'
 
  const OptionalQuestion3 = ({formData, navigation, setForm}) => {
 
-     const classes =useStyles();
      const{Whyareyoulookingforanewone }=formData
 
-    //  const [value, setValue] = React.useState('I’m unsatisfied with my current advisor');
-
-    //  const handleChange = (event) => {
-    //    setValue(event.target.value);
-    //  };
-
+  
 
     return (
         <Container  className= "form">
@@ -76,7 +68,6 @@ import useStyles from './styles.js'
             </Button>
          </div>
       </FormControl>
-      <Accordion/>
 
    </Container>
     )

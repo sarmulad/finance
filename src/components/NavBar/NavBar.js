@@ -6,8 +6,8 @@ const NavBar = ()=> {
     const classes = useStyles();
     return (
         <AppBar position='fixed' className={classes.appBar}>
-           <Typography variant='h4' color='inherit'>
-               <Link to='/' style={{textDecoration:'none', color:'white'}}>FINANCE</Link> 
+           <Typography variant='h6' color='inherit' align='center'>
+               <Link to='/' style={{textDecoration:'none', color:'white'}}>Finance</Link> 
            </Typography>
         </AppBar>
     )

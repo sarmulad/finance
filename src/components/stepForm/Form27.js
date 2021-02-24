@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react'
 import Container from '@material-ui/core/Container'
-import Accordion from './Accordion' ;
  import './index.css';
 import { Typography, Button } from '@material-ui/core';
 
@@ -10,7 +9,6 @@ import { Typography, Button } from '@material-ui/core';
 
     return (
         <Container  className= "form">
-            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
                 <Typography  controlled="true" variant='h4'>Is there anything else you'd like your matches to know? (optional) </Typography>
                 <input type='text' 
                     name='messagetomatch'
@@ -35,7 +33,6 @@ import { Typography, Button } from '@material-ui/core';
                 Submit
                 </Button>
             </div>
-            <Accordion/>
 
 </Container>
     )

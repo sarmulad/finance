@@ -4,15 +4,12 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import Accordion from './Accordion' ;
  import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
-import useStyles from './styles.js'
 
  const Form4 = ({formData, navigation, setForm}) => {
-     const classes =useStyles();
      const{ Whatactivityismostimportanttoyouinretirement}=formData
     //  const [value, setValue] = React.useState('1-4 years');
 
@@ -23,7 +20,6 @@ import useStyles from './styles.js'
 
     return (
         <Container  className= "form">
-            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
             <FormControl component="fieldset" style={{width:'100%'}}>
                 <Typography variant="h5" className="question">What activity is most important to you in retirement?</Typography>
                 <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label=" What activity is most important to you in retirement?" name="Whatactivityismostimportanttoyouinretirement" value={Whatactivityismostimportanttoyouinretirement} onChange={setForm}>
@@ -68,7 +64,6 @@ import useStyles from './styles.js'
                 Next
                 </Button>
              </div>
-             <Accordion/>
 
           </FormControl>
        </Container>

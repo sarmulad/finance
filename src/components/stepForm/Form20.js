@@ -1,29 +1,22 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 
-import Accordion from './Accordion' ;
  import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
-import useStyles from './styles.js'
 
  const Form20= ({formData, navigation, setForm}) => {
-     const classes =useStyles();
+   
      const{ZipCode }=formData
 
-    //  const [value, setValue] = React.useState('');
-
-    //  const handleChange = (event) => {
-    //    setValue(event.target.value);
-    //  };
+    
 
 
     return (
         <Container  className= "form">
-            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
                 <Typography  controlled="true" variant='h4'>Where are you located ? </Typography>
-                <input type='text' placeholder='Zip code (e.g 90210)'
+                <input type='number' placeholder='Zip code (e.g 90210)'
                     name='ZipCode'
                     onChange = {setForm}
                     value = {ZipCode}
@@ -46,7 +39,6 @@ import useStyles from './styles.js'
                 Next
                 </Button>
             </div>
-            <Accordion/>
 
 </Container>
     )

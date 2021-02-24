@@ -1,7 +1,5 @@
-import React, { useState } from "react"; 
-import validator from 'validator'
+import React from "react"; 
 import Container from '@material-ui/core/Container'
-import Accordion from './Accordion' ;
  import './index.css';
 import { Typography, Button } from '@material-ui/core';
 
@@ -30,7 +28,6 @@ const Name = ({formData, navigation, setForm}) =>  {
 
 return ( 
     <Container   className= "form">
-            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
                 <Typography variant="h5" gutterBottom >Great! We've found some fantastic advisors who fit your needs </Typography>
                 <Typography variant="h5" gutterBottom>Who should we have them reach out to? </Typography>
 
@@ -65,7 +62,6 @@ return (
                  Submit
                 </Button>
             </div>
-            <Accordion/>
 
         </Container>
 ); 

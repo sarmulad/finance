@@ -4,15 +4,12 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import Accordion from './Accordion' ;
  import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
-import useStyles from './styles.js'
 
  const Form3 = ({formData, navigation, setForm}) => {
-     const classes =useStyles();
      const {Howdoyoucurrentlymanageyourmoney} =formData
 
 
@@ -25,7 +22,6 @@ import useStyles from './styles.js'
 
     return (
         <Container  className= "form">
-            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
             <FormControl component="fieldset" style={{width:'100%'}}>
                 <Typography variant="h5" className="question">How do you currently manage your money?</Typography>
                 <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How do you currently manage your money?" name="Howdoyoucurrentlymanageyourmoney" value={Howdoyoucurrentlymanageyourmoney} onChange={setForm}>
@@ -51,7 +47,6 @@ import useStyles from './styles.js'
                 Next
                 </Button>
              </div>
-             <Accordion/>
 
           </FormControl>
        </Container>
