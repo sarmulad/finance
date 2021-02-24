@@ -5,25 +5,16 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
-import Accordion from './Accordion' ;
  import './index.css';
 
-import useStyles from './styles.js'
 
  const Form24 = ({formData, navigation, setForm}) => {
-     const classes =useStyles();
      const{Pleaseestimateyourtotalinvestableassets }=formData
 
-    //  const [value, setValue] = React.useState('');
-
-    //  const handleChange = (event) => {
-    //    setValue(event.target.value);
-    //  };
-
+   
 
     return (
         <Container  className= "form">
-        <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5" className="question">Please estimate your total investable assets.</Typography>
             <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label="Please estimate your total investable assets.."
@@ -86,7 +77,6 @@ import useStyles from './styles.js'
                 Next
                 </Button>
             </div>
-            <Accordion/>
 
     </FormControl>
 </Container>

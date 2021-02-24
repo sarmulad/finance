@@ -1,7 +1,6 @@
 import React, { useState } from "react"; 
 import validator from 'validator'
 import Container from '@material-ui/core/Container'
-import Accordion from './Accordion' ;
  import './index.css';
 import { Typography, Button } from '@material-ui/core';
 
@@ -23,7 +22,6 @@ const validateEmail = (e) => {
 
 return ( 
     <Container   className= "form">
-            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
                 <Typography variant="h5" >Where can you receive information about your advisors? </Typography>
                 <p style={{ fontFamily:'sans-serif', fontSize:'12px', lineHeight:'20px'}}>Bonus: We'll send you a personalized retirement report once you verify your contact info</p>
                 <span style={{fontFamily:'sans-serif', marginBottom:'8px'}}>Enter Email: </span><br/>
@@ -57,7 +55,6 @@ return (
                   Next
                 </Button>
             </div>
-            <Accordion/>
 
         </Container>
 ); 

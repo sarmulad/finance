@@ -4,9 +4,10 @@ export default makeStyles(()=>({
     appBar: {
         boxShadow: 'none',
         borderBottom : '1px solid rgba(0, 0, 0, 0.12)',
-        padding:'20px',
-        backgroundColor:'#00a86b'
-
+        padding:'10px',
+        backgroundColor:'#111e6c',
+        alighItems:'center',
+        
         
        
     }

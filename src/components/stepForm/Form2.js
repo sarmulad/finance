@@ -6,13 +6,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 
 import { Typography, Button } from '@material-ui/core';
-import Accordion from './Accordion' ;
  import './index.css';
 
 import useStyles from './styles.js'
 
  const Form2 = ({formData, navigation, setForm}) => {
-     const classes =useStyles();
      const{retirementTime} = formData
 
     //  const [value, setValue] = React.useState('1-4 years');
@@ -24,7 +22,6 @@ import useStyles from './styles.js'
 
     return (
         <Container   className= "form">
-            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
             <FormControl component="fieldset" style={{width:'100%'}}>
                 <Typography variant="h5" className="question">When would you like to retire?</Typography>
                 <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label=" retirement time" name="retirementTime" value={retirementTime} onChange={setForm}>
@@ -50,7 +47,6 @@ import useStyles from './styles.js'
                 Next
                 </Button>
              </div>
-                 <Accordion/>
           </FormControl>
 
        </Container>

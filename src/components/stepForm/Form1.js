@@ -9,7 +9,6 @@ import FormControl from '@material-ui/core/FormControl';
 
 import { Typography, Button } from '@material-ui/core';
 import useStyles from './styles.js'
-import Accordion from './Accordion' ;
  import './index.css';
 
  const Form1 = ({formData, navigation, setForm}) => {
@@ -18,9 +17,8 @@ import Accordion from './Accordion' ;
     
      
     return (
+        
         <Container  className= "form">
-
-            <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
             <FormControl   controlled="true" component="fieldset">
                 <Typography variant="h5" className="question">How confident are you in your long term financial plan?</Typography>
                 <RadioGroup  controlled="true" controlled style={{paddingLeft:'10px'}} aria-label=" how confident are you" name='levelOfConfidence' value={levelOfConfidence} onChange={setForm}>
@@ -41,11 +39,11 @@ import Accordion from './Accordion' ;
                     Next
                     </Button>
               </div>
-              <Accordion/>
-            
           </FormControl>
          
      </Container>
+    
+
     )
 }
 

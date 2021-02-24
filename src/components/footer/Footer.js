@@ -16,8 +16,7 @@ function Footer() {
                 <a href='#'>About</a>
                 <a href='#'>smartreads</a>
                 <a href='#'>captivate</a>
-                <a href='#'>smartadvisor</a>
-                <a href='#'>press</a>
+                
 
             </div>
             <div className='social'>
