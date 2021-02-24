@@ -6,10 +6,9 @@ import Accordion from './Accordion' ;
 
 import { Typography, Button } from '@material-ui/core';
 
-import useStyles from './styles.js'
 
  const Form20= ({formData, navigation, setForm}) => {
-     const classes =useStyles();
+   
      const{ZipCode }=formData
 
     //  const [value, setValue] = React.useState('');
@@ -27,6 +26,7 @@ import useStyles from './styles.js'
                     name='ZipCode'
                     onChange = {setForm}
                     value = {ZipCode}
+                    
                     style={{border:'1px solid black', padding:'15px',margin:'50px 0px 150px 0px', width:'90%',outline:'none'}}
                 />
                

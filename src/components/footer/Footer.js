@@ -6,6 +6,7 @@ function Footer() {
     return (
         <div className='footer'>
             <div className='getInTouch'>
+           
                 <a href='#'>contact</a>
                 <a href='#'>careers</a>
                 <a href='#'>unsubscribe</a>

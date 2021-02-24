@@ -9,7 +9,7 @@ import Footer from './components/footer/Footer'
 const App = () => {
     return (
         <BrowserRouter>
-        <Container maxWidth ='md'  >
+        <Container maxWidth ='lg'  >
         <Route exact path='/' component={Index}/> 
         </Container>
         <Footer/>

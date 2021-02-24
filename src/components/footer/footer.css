@@ -7,8 +7,8 @@
     background-color: #00a86b;
     width: 100vw!important;
     margin-top: 50px ;
-    padding: 50px;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
     margin-bottom: 0;
 }
 .footer div{
