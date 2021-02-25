@@ -4,7 +4,7 @@ import { Grid} from "@material-ui/core"
 import './footer.css'
 function Footer() {
     return (
-        <div className='footer'>
+        <footer className='footer'>
             <div className='getInTouch'>
            
                 <a href='#'>contact</a>
@@ -33,7 +33,7 @@ function Footer() {
 
 
             </div>
-        </div>
+        </footer>
     )
 }
 

@@ -23,6 +23,8 @@ const Name = ({formData, navigation, setForm}) =>  {
          // body data type must match "Content-Type" header
       }).then(() => alert("submitted sucessfully, we will contact you"))
       .catch(() => alert("There was an error, please try again"));
+    //   window.location.href('/sucesspage')
+      window.location.href = '/successpage'
         // .catch(err, )
     }
 

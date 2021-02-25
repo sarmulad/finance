@@ -1,6 +1,5 @@
 
 .footer{
-
     display:grid;
     justify-content: space-between;
     align-items: space-between;
@@ -12,12 +11,18 @@
     margin-bottom: 0;
     overflow-x: hidden;
 }
+
+@media(min-width:768px) {
+    .footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
 .footer div{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    
-    
 }
 .footer a{
     text-decoration: none;

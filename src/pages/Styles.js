@@ -4,9 +4,9 @@ export default makeStyles(()=>({
   background:{
     background: 'url("../images/background.jpg")',
     backgroundSize:'cover',
-    minHeight:'100vh',
+    // minHeight:'100vh',
     // width:'100vw',
-    padding: '5%'
+    // padding: '5%'
     
   }
 }))

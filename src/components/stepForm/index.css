@@ -30,10 +30,8 @@
     margin-top: 0px;
     /* margin-bottom: 120px; */
     background: #fff;
+    width: 100%;
     padding: 40px 30px !important;
-    /* margin: 100px 13% !important; */
-     /* height: 700vh;  */
-    /* overflow: hidden; */
 }
 
 .form-control {

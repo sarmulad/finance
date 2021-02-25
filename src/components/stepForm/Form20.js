@@ -9,6 +9,16 @@ import { Typography, Button } from '@material-ui/core';
  const Form20= ({formData, navigation, setForm}) => {
    
      const{ZipCode }=formData
+     
+     const ZipCodeField =() => {
+        let status = ''
+        if (formData.ZipCode == "") {
+            status = null
+        } else {
+            status = navigation.next()
+        }
+        return status
+    }
 
     
 
@@ -20,7 +30,7 @@ import { Typography, Button } from '@material-ui/core';
                     name='ZipCode'
                     onChange = {setForm}
                     value = {ZipCode}
-                    style={{border:'1px solid black', padding:'15px',margin:'50px 0px 150px 0px', width:'90%',outline:'none'}}
+                    style={{border:'1px solid black', padding:'15px',margin:'50px 0px 80px 0px', width:'90%',outline:'none'}}
                 />
                
             <div >
@@ -35,7 +45,7 @@ import { Typography, Button } from '@material-ui/core';
                 variant='contained'
                 color='secondary' 
                 style={{marginTop:'1rem'}}
-                onClick ={()=>navigation.next()}>
+                onClick ={()=>ZipCodeField()}>
                 Next
                 </Button>
             </div>

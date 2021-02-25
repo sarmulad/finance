@@ -28,8 +28,7 @@ import Form26 from '../stepForm/Form26'
 import Form27 from '../stepForm/Form27'
 import Email from '../stepForm/Email'
 import Name from '../stepForm/Name'
-
-// import SucessPage from '../stepForm/SucessPage'
+import SucessPage from '../stepForm/SucessPage'
 import  OptionalQuestion1   from    '../stepForm/OptionalQuestion1'
 import  OptionalQuestion2   from    '../stepForm/OptionalQuestion2'
 import  OptionalQuestion3   from    '../stepForm/OptionalQuestion3'
@@ -199,6 +198,8 @@ const MultistepForm = () => {
             return <Email {...props}/>;
             case 31 : 
             return <Name {...props}/>;
+            case 32 :
+                return <SucessPage />
             default:
                 return (
                     <div className='body'>
