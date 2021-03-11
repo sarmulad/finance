@@ -30,7 +30,7 @@ import { Typography, Button } from '@material-ui/core';
                 color='secondary' 
                 style={{marginTop:'1rem'}}
                 onClick ={()=>navigation.next()}>
-                Submit
+                Next
                 </Button>
             </div>
 

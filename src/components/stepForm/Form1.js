@@ -8,11 +8,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 
 import { Typography, Button } from '@material-ui/core';
-import useStyles from './styles.js'
  import './index.css';
 
  const Form1 = ({formData, navigation, setForm}) => {
-     const classes =useStyles();
      const{levelOfConfidence} = formData
     
      
@@ -33,7 +31,7 @@ import useStyles from './styles.js'
                     
                     <Button 
                     variant='contained'
-                    className={classes.btn}
+                    // className={classes.btn}
                     style={{marginTop:'1rem',}}
                     onClick ={()=>navigation.next()}>
                     Next

@@ -12,11 +12,7 @@ import { Typography, Button } from '@material-ui/core';
 
      const {Areyoumarried} =formData
 
-    //  const [value, setValue] = React.useState('No');
-
-    //  const handleChange = (event) => {
-    //    setValue(event.target.value);
-    //  };
+   
     const marriagestatus =() => {
         let status = ''
         if (formData.Areyoumarried == "Yes") {

@@ -8,7 +8,7 @@ const Name = ({formData, navigation, setForm}) =>  {
 
       const submitData = () => {
 
-       fetch('https://hooks.zapier.com/hooks/catch/1451168/opnpfmt/', {
+       fetch('https://hooks.zapier.com/hooks/catch/1451168/on0te22/', {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -21,8 +21,7 @@ const Name = ({formData, navigation, setForm}) =>  {
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify(formData)
          // body data type must match "Content-Type" header
-      }).then(() => alert("submitted sucessfully, we will contact you"))
-      .catch(() => alert("There was an error, please try again"));
+      })
     //   window.location.href('/sucesspage')
       window.location.href = '/successpage'
         // .catch(err, )

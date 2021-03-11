@@ -8,7 +8,6 @@ import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
-import useStyles from './styles.js'
 
  const Form2 = ({formData, navigation, setForm}) => {
      const{retirementTime} = formData

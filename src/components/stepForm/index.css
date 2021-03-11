@@ -28,7 +28,7 @@
 }
 .form {
     margin-top: 0px;
-    /* margin-bottom: 120px; */
+    /* margin-bottom: 120px !important;  */
     background: #fff;
     width: 100%;
     padding: 40px 30px !important;
@@ -67,7 +67,9 @@
 
 body {
     /* background-color: purple !important; */
-    background: url('../../images/financial-advisor-bkgd.jpg') !important;
+    /* background: url('../../images/financial-advisor-bkgd.jpg') !important; */
+    background: url('../../images/pexels-david-mcbee-730547.jpg') !important;
+
     overflow-x: hidden;
     max-width:100%;
     padding:auto; 

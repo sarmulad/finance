@@ -3,21 +3,22 @@
     display:grid;
     justify-content: space-between;
     align-items: space-between;
-    background-color: #111e6c;
+    background-color: #0078c4;
     width: 100vw!important;
-    margin-top: 50px ;
+    margin-top: 80px ;
+    height: 15vh;
     padding: 50px 30px;
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
     margin-bottom: 0;
     overflow-x: hidden;
 }
 
-@media(min-width:768px) {
+/* @media(min-width:768px) {
     .footer {
         position: fixed;
         bottom: 0;
     }
-}
+} */
 
 .footer div{
     display: flex;

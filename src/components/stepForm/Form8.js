@@ -7,10 +7,9 @@ import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
-import useStyles from './styles.js'
 
  const Form8= ({formData, navigation, setForm}) => {
-     const classes =useStyles();
+ 
      const{Howcomfortableareyouwithinvesting}=formData
 
 

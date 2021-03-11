@@ -8,10 +8,8 @@ import FormControl from '@material-ui/core/FormControl';
 
 import { Typography, Button } from '@material-ui/core';
 
-import useStyles from './styles.js'
 
  const Form12 = ({formData, navigation, setForm}) => {
-     const classes =useStyles();
      const{Doyouownabusiness}=formData
 
     //  const [value, setValue] = React.useState('No');
