@@ -27,7 +27,7 @@ import { Typography, Button } from '@material-ui/core';
                 onChange={setForm}>
                 <FormControlLabel
                     className="form-control"   
-                    value=" Internet search"
+                    value="Internetsearch"
                     control={<Radio color='black'/>} 
                     label="Internet search" />
 

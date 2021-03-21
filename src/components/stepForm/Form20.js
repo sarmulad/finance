@@ -14,6 +14,7 @@ import { Typography, Button } from '@material-ui/core';
         let status = ''
         if (formData.ZipCode == "") {
             status = null
+            alert("Please enter your Zip code")
         } else {
             status = navigation.next()
         }

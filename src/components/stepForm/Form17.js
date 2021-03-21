@@ -28,9 +28,9 @@ import { Typography, Button } from '@material-ui/core';
                 onChange={setForm}>
                 <FormControlLabel
                 className="form-control" 
-                    value="Tax expertise"
+                    value="Taxexpertise"
                     control={<Radio color='black'/>} 
-                    label="Taxexpertise" />
+                    label="Tax expertise" />
                 <FormControlLabel 
                 className="form-control" 
                     value="Estate planning expertise" 

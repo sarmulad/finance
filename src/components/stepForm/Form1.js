@@ -20,7 +20,7 @@ import { Typography, Button } from '@material-ui/core';
             <FormControl   controlled="true" component="fieldset">
                 <Typography variant="h5" className="question">How confident are you in your long term financial plan?</Typography>
                 <RadioGroup  controlled="true" controlled style={{paddingLeft:'10px'}} aria-label=" how confident are you" name='levelOfConfidence' value={levelOfConfidence} onChange={setForm}>
-                  <FormControlLabel className="form-control"  value="Very confident" control={<Radio color='black' />} label="Very confident"  />
+                  <FormControlLabel className="form-control"  value="Veryconfident" control={<Radio color='black' />} label="Very confident"  />
                   <FormControlLabel className="form-control" value="Somewhat confident" control={<Radio  color='black' />} label="Somewhat confident" />
                   <FormControlLabel className="form-control" value="Notconfident" control={<Radio color='black'/>} label="Not confident" />
                   <FormControlLabel className="form-control" value=" I don't have a plan"  control={<Radio color='black' />} label=" I don't have a plan" />

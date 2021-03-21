@@ -45,7 +45,7 @@ import { Typography, Button } from '@material-ui/core';
                 variant='contained'
                 color='primary' 
                 style={{marginTop:'1rem', marginRight:'3rem'}}
-                onClick ={()=> navigation.go(10)}>
+                onClick ={()=> navigation.go(8)}>
                     Back
                 </Button>
                 <Button 

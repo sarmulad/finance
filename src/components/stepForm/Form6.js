@@ -25,7 +25,7 @@ import { Typography, Button } from '@material-ui/core';
                 <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label="" name="Wheredoyouexpectthemajorityofyourretirementincometocomefrom" value={Wheredoyouexpectthemajorityofyourretirementincometocomefrom} onChange={setForm}>
                     <FormControlLabel
                     className="form-control"
-                     value="Savings and investments" control={<Radio color='black'/>} 
+                     value="Savingsandinvestments" control={<Radio color='black'/>} 
                      label="Savings and investments" />
                     <FormControlLabel 
                     className="form-control"

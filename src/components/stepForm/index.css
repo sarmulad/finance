@@ -68,12 +68,13 @@
 body {
     /* background-color: purple !important; */
     /* background: url('../../images/financial-advisor-bkgd.jpg') !important; */
-    background: url('../../images/pexels-david-mcbee-730547.jpg') !important;
+    background: url('../../images/page-bg.jpg') !important;
 
     overflow-x: hidden;
     max-width:100%;
     padding:auto; 
     margin: auto;
    
+
 
 }

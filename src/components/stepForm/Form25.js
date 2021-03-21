@@ -25,7 +25,7 @@ import { Typography, Button } from '@material-ui/core';
                 onChange={setForm}>
                 <FormControlLabel
                      className="form-control"   
-                    value="Less than $100"
+                    value="Lessthan$100"
                     control={<Radio color='black'/>} 
                     label="
                     Less than $100" />

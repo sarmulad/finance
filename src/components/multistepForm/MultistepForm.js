@@ -4,15 +4,15 @@ import Form1 from '../stepForm/Form1'
 import Form2 from '../stepForm/Form2'
 import Form3 from '../stepForm/Form3'
 import Form4 from '../stepForm/Form4'
-import Form5 from '../stepForm/Form5'
+// import Form5 from '../stepForm/Form5'
 import Form6 from '../stepForm/Form6'
-import Form7 from '../stepForm/Form7'
+// import Form7 from '../stepForm/Form7'
 import Form8 from '../stepForm/Form8'
 import Form9 from '../stepForm/Form9'
 import Form10 from '../stepForm/Form10'
 import Form11 from '../stepForm/Form11'
 import Form12 from '../stepForm/Form12'
-import Form13 from '../stepForm/Form13'
+// import Form13 from '../stepForm/Form13'
 import Form14 from '../stepForm/Form14'
 import Form15 from '../stepForm/Form15'
 import Form16 from '../stepForm/Form16'
@@ -20,7 +20,7 @@ import Form17 from '../stepForm/Form17'
 import Form18 from '../stepForm/Form18'
 import Form19 from '../stepForm/Form19'
 import Form20 from '../stepForm/Form20'
-import Form21 from '../stepForm/Form21'
+// import Form21 from '../stepForm/Form21'
 import Form23 from '../stepForm/Form23'
 import Form24 from '../stepForm/Form24'
 import Form25 from '../stepForm/Form25'
@@ -39,38 +39,36 @@ import  OptionalQuestion3   from    '../stepForm/OptionalQuestion3'
 
 
 const defaultData ={
-   levelOfConfidence:'Notconfident',
+   levelOfConfidence:'Veryconfident',
    retirementTime:'1-4years',
    Howdoyoucurrentlymanageyourmoney:'Imanagemyowninvestments',
    Whatactivityismostimportanttoyouinretirement:'Traveling',
    Whichwordmostaccuratelydescribesyourvisionofretirement:'Enjoyment',
-   Wheredoyouexpectthemajorityofyourretirementincometocomefrom:'Employer',
-   Howwouldyoucharacterizeyouroverallhealth:'Excellent',
+   Wheredoyouexpectthemajorityofyourretirementincometocomefrom:'Savingsandinvestments',
    Howcomfortableareyouwithinvesting:'Verycomfortable',
-   Areyoumarried:'Yes',
-   Doyouownahome:'Yes',
-   Doyoucurrentlyhavechildrenunder18:'Yes,1',
+   Areyoumarried:'No',
+   Doyouownahome:'No',
+   Doyoucurrentlyhavechildrenunder18:'No',
    Doyouownabusiness:'No',
-   ImrespondingtotheimpactoftheCoronavirusby:'Doingnothing',
-   Doyouhavea401k:'No',
-   DoyouhaveanIRA:'No',
+   Doyouhavea401k:'Yes',
+   DoyouhaveanIRA:'Yes',
    Doyouhaveanemergencyfund:'Yes',
    importantForAFinancialAdvisor:'Taxexpertise',
    Issociallyresponsibleinvestingimportanttoyou:'Musthave',
    Doyoucurrentlyhaveafinancialadvisor:'No',
    ZipCode:'',
-   DoYouNeedyourfinancialadvisortobeinYourImmediateArea:'No',
    PleaseEstimateYourHouseholdIncome:'Lessthan$40,000',
-   Pleaseestimateyourtotalinvestableassets:'$25,000-$99,999',
-   Pleaseestimateyourcurrentmonthlysavings:'$250-$499',
-   Howdidyouhearaboutus:'TV',
+   Pleaseestimateyourtotalinvestableassets:'Lessthan$25,000',
+   Pleaseestimateyourcurrentmonthlysavings:'Lessthan$100',
+   Howdidyouhearaboutus:'Internetsearch',
    messagetomatch: '',
     Email:'',
     FirstName:'',
     LastName:'',
+    Phone:'',
 
 // optional questions
-   Areyousavingjointlyorseparately:'separately',
+   Areyousavingjointlyorseparately:'Separately',
    Whyareyoulookingforanewone:'Other',
    Haveyourefinancedyourhomerecently:'No'
 };
@@ -113,10 +111,6 @@ const steps = [
     {id:30},
     {id:31},
 
-    
-
-
-
 ]
 
 
@@ -145,11 +139,11 @@ const MultistepForm = () => {
             case 4 : 
             return <Form4 {...props}/>;
             case 5 : 
-            return <Form5 {...props}/>;
+            // return <Form5 {...props}/>;
             case 6 : 
             return <Form6 {...props}/>;
             case 7 : 
-            return <Form7 {...props}/>;
+            // return <Form7 {...props}/>;
             case 8 : 
             return <Form8 {...props}/>;
             case 9 : 
@@ -165,7 +159,7 @@ const MultistepForm = () => {
             case 14 : 
             return <Form12 {...props}/>;
             case 15 : 
-            return <Form13 {...props}/>;
+            // return <Form13 {...props}/>;
             case 16 : 
             return <Form14 {...props}/>;
             case 17 : 
@@ -183,7 +177,7 @@ const MultistepForm = () => {
             case 23 : 
             return <Form20 {...props}/>;
             case 24 : 
-            return <Form21 {...props}/>;
+            // return <Form21 {...props}/>;
             case 25 : 
             return <Form23 {...props}/>;
             case 26 : 
