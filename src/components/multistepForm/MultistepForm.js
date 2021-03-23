@@ -120,7 +120,7 @@ const MultistepForm = () => {
     const [formData, setForm]= useForm(defaultData)
     const {step, navigation} = useStep({
         steps,
-        initialStep: 28
+        initialStep: 0
     })
 
     
