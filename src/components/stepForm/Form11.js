@@ -9,45 +9,38 @@ import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
 
 
- const Form11 = ({formData, navigation, setForm}) => {
+ const Form14 = ({formData, navigation, setForm}) => {
+     const{Doyouhavea401k}=formData
 
-     const {Doyoucurrentlyhavechildrenunder18}= formData
+
 
 
     return (
         <Container  className= "form">
                 <FormControl component="fieldset" style={{width:'100%'}}>
-                    <Typography variant="h5" className="question">Do you currently have children under 18?</Typography>
-                    <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you currently have children under 18?              
-                    " name="Doyoucurrentlyhavechildrenunder18" value={Doyoucurrentlyhavechildrenunder18} onChange={setForm}>
+                    <Typography variant="h5" className="question">Do you have a 401k?</Typography>
+                    <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you have a 401k?"
+                        name="Doyouhavea401k" 
+                        value={Doyouhavea401k} 
+                        onChange={setForm}>
                         <FormControlLabel
-                        className="form-control"  
-                            value="No"
+                        className="form-control"
+                            value="Yes"
                             control={<Radio color='black'/>} 
-                            label="No" />
+                            label="Yes" />
                         <FormControlLabel 
                         className="form-control"
-                            value="Yes,1" 
+                            value="No" 
                             control={<Radio color='black'/>} 
-                            label="Yes, 1" /> 
-                        <FormControlLabel 
-                        className="form-control"
-                            value="Yes, 2" 
-                            control={<Radio color='black'/>} 
-                            label="Yes , 2" />
-                        <FormControlLabel 
-                        className="form-control"
-                            value="Yes, 3 or more" 
-                            control={<Radio color='black' />} 
-                            label="Yes , 3 or more" />
+                            label="No" /> 
                         
                     </RadioGroup>
-                <div >
+                <div className='buttons'>
                     <Button 
                     variant='contained'
                     color='primary' 
                     style={{marginTop:'1rem', marginRight:'3rem'}}
-                    onClick ={()=> navigation.go(10)}>
+                    onClick ={()=>navigation.previous()}>
                         Back
                     </Button>
                     <Button 
@@ -58,10 +51,10 @@ import { Typography, Button } from '@material-ui/core';
                     Next
                     </Button>
                 </div>
-            </FormControl>
 
+            </FormControl>
         </Container>
     )
 }
 
-export default Form11
+export default Form14

@@ -8,10 +8,12 @@ import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
 
- const Form6= ({formData, navigation, setForm}) => {
-     const{Wheredoyouexpectthemajorityofyourretirementincometocomefrom}=formData
+ const Form8= ({formData, navigation, setForm}) => {
+ 
+     const{Howcomfortableareyouwithinvesting}=formData
 
-    //  const [value, setValue] = React.useState('Savings and investments');
+
+    //  const [value, setValue] = React.useState('Very comfortable');
 
     //  const handleChange = (event) => {
     //    setValue(event.target.value);
@@ -19,51 +21,47 @@ import { Typography, Button } from '@material-ui/core';
 
 
     return (
-        <Container  className= "form">
-            <FormControl component="fieldset" style={{width:'100%'}}>
-                <Typography variant="h5" className="question">Where do you expect the majority of your retirement income to come from?</Typography>
-                <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label="" name="Wheredoyouexpectthemajorityofyourretirementincometocomefrom" value={Wheredoyouexpectthemajorityofyourretirementincometocomefrom} onChange={setForm}>
-                    <FormControlLabel
-                    className="form-control"
-                     value="Savingsandinvestments" control={<Radio color='black'/>} 
-                     label="Savings and investments" />
-                    <FormControlLabel 
-                    className="form-control"
-                     value="Employer" 
-                     control={<Radio  color='black'/>} 
-                     label="Employer (Pensions)" />
-                    <FormControlLabel
-                    className="form-control"
-                     value="Government" 
-                     control={<Radio color='black' />}
-                      label="Government" />
-                    <FormControlLabel 
-                    className="form-control"
-                    value=" Other" 
-                     control={<Radio color='black' />} 
-                     label="  Other" />
-                    
-                </RadioGroup>
-             <div >
-                <Button 
-                variant='contained'
-                color='primary' 
-                style={{marginTop:'1rem', marginRight:'3rem'}}
-                onClick ={()=>navigation.previous()}>
-                    Back
-                </Button>
-                <Button 
-                variant='contained'
-                color='secondary' 
-                style={{marginTop:'1rem'}}
-                onClick ={()=>navigation.next()}>
-                Next
-                </Button>
-             </div>
+        <Container   className= "form">
+        <FormControl component="fieldset" style={{width:'100%'}}>
+            <Typography variant="h5" className="question">How comfortable are you with investing?</Typography>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How comfortable are you with investing? " name="Howcomfortableareyouwithinvesting" value={Howcomfortableareyouwithinvesting} onChange={setForm}>
+                <FormControlLabel
+                className="form-control"
+                 value="Verycomfortable"
+                  control={<Radio color='black'/>} 
+                 label="Very comfortable" />
+                <FormControlLabel 
+                className="form-control"
+                 value="Somewhat comfortable" 
+                 control={<Radio color='black'/>} 
+                 label="Somewhat comfortable" />
+                <FormControlLabel
+                className="form-control"
+                 value="Not comfortable at all" 
+                 control={<Radio color='black'/>}
+                  label="Not comfortable at all" />
+                
+            </RadioGroup>
+         <div className='buttons'>
+            <Button 
+            variant='contained'
+            color='primary' 
+            style={{marginTop:'1rem', marginRight:'3rem'}}
+            onClick ={()=>navigation.previous()}>
+                Back
+            </Button>
+            <Button 
+            variant='contained'
+            color='secondary' 
+            style={{marginTop:'1rem'}}
+            onClick ={()=>navigation.next()}>
+            Next
+            </Button>
+         </div>
 
-          </FormControl>
-       </Container>
+      </FormControl>
+   </Container>
     )
 }
 
-export default Form6
+export default Form8

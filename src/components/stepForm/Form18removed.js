@@ -8,10 +8,10 @@ import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
 
- const Form17 = ({formData, navigation, setForm}) => {
-     const{importantForAFinancialAdvisor}=formData
+ const Form18 = ({formData, navigation, setForm}) => {
+     const{Issociallyresponsibleinvestingimportanttoyou}=formData
 
-    //  const [value, setValue] = React.useState('Tax expertise');
+    //  const [value, setValue] = React.useState('Must have');
 
     //  const handleChange = (event) => {
     //    setValue(event.target.value);
@@ -21,31 +21,27 @@ import { Typography, Button } from '@material-ui/core';
     return (
         <Container  className= "form">
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5" className="question">Which of these is most important for your financial advisor to have?</Typography>
-            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Which of these is most important for your financial advisor to have?"
-                name="importantForAFinancialAdvisor" 
-                value={importantForAFinancialAdvisor} 
+            <Typography variant="h5" className="question">Is socially responsible investing important to you?</Typography>
+            <RadioGroup   controlled="true" style={{paddingLeft:'10px'}} aria-label="Is socially responsible investing important to you?"
+                name="Issociallyresponsibleinvestingimportanttoyou" 
+                value={Issociallyresponsibleinvestingimportanttoyou} 
                 onChange={setForm}>
                 <FormControlLabel
-                className="form-control" 
-                    value="Taxexpertise"
-                    control={<Radio color='black'/>} 
-                    label="Tax expertise" />
+                className="form-control"   
+                    value="Musthave"
+                    control={<Radio color='black' />} 
+                    label="Must have" />
                 <FormControlLabel 
                 className="form-control" 
-                    value="Estate planning expertise" 
+                    value="Nice to have" 
                     control={<Radio color='black'/>} 
-                    label="Estate planning expertise" /> 
+                    label="Nice to have" /> 
                 <FormControlLabel 
                 className="form-control" 
-                    value="Insurance product expertise" 
+                    value="Not important" 
                     control={<Radio color='black'/>} 
-                    label="Insurance product expertise" /> 
-               <FormControlLabel 
-               className="form-control" 
-                    value="None of the above" 
-                    control={<Radio color='black'/>} 
-                    label="None of the above" /> 
+                    label="Not important" /> 
+              
                 
             </RadioGroup>
             <div className='buttons'>
@@ -70,4 +66,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form17
+export default Form18

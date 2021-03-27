@@ -16,28 +16,36 @@
         margin: 50px;
         margin-bottom: 0px !important;
         background: #fff;
+        min-height: 80vh;
         padding: 6% 3% 6% 3% !important;
     }
+    
+  
 }
 
 
 
 
-.makeStyles-formControl-6 {
+ .makeStyles-formControl-6 {
     border: none;
-}
+} 
 .form {
     margin-top: 0px;
     /* margin-bottom: 120px !important;  */
     background: #fff;
     width: 100%;
+   min-height: 80vh;
     padding: 40px 30px !important;
+}
+.buttons{
+    position: absolute;
+    top: 60vh;
+    
 }
 
 .form-control {
-    /* border:'1px solid #dee1e9'; */
+    /* border:'1px solid #dee1e9';   */
     margin-top:5px ;
- 
     border-radius: 10px;
 }
 

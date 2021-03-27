@@ -4,14 +4,14 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
+import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
-import { Typography, Button } from '@material-ui/core';
 
+ const Form6= ({formData, navigation, setForm}) => {
+     const{Wheredoyouexpectthemajorityofyourretirementincometocomefrom}=formData
 
- const Form4 = ({formData, navigation, setForm}) => {
-     const{ Whatactivityismostimportanttoyouinretirement}=formData
-    //  const [value, setValue] = React.useState('1-4 years');
+    //  const [value, setValue] = React.useState('Savings and investments');
 
     //  const handleChange = (event) => {
     //    setValue(event.target.value);
@@ -21,32 +21,28 @@ import { Typography, Button } from '@material-ui/core';
     return (
         <Container  className= "form">
             <FormControl component="fieldset" style={{width:'100%'}}>
-                <Typography variant="h5" className="question">What activity is most important to you in retirement?</Typography>
-                <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label=" What activity is most important to you in retirement?" name="Whatactivityismostimportanttoyouinretirement" value={Whatactivityismostimportanttoyouinretirement} onChange={setForm}>
-                    <FormControlLabel
-                    className="form-control"  
-                     value="Traveling" control={<Radio color='black'/>} 
-                     label="Traveling" />
-                    <FormControlLabel 
-                    className="form-control"
-                     value="Spending time with family and friends" 
-                     control={<Radio color='black' />} 
-                     label="Spending time with family and friends" />
+                <Typography variant="h5" className="question">Where do you expect the majority of your retirement income to come from?</Typography>
+                <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label="" name="Wheredoyouexpectthemajorityofyourretirementincometocomefrom" value={Wheredoyouexpectthemajorityofyourretirementincometocomefrom} onChange={setForm}>
                     <FormControlLabel
                     className="form-control"
-                     value="Pursuing hobbies" 
-                     control={<Radio  color='black'/>}
-                      label="Pursuing hobbies" />
+                     value="Savingsandinvestments" control={<Radio color='black'/>} 
+                     label="Savings and investments" />
                     <FormControlLabel 
                     className="form-control"
-                    value=" Working part-time" 
+                     value="Employer" 
+                     control={<Radio  color='black'/>} 
+                     label="Employer (Pensions)" />
+                    <FormControlLabel
+                    className="form-control"
+                     value="Government" 
+                     control={<Radio color='black' />}
+                      label="Government" />
+                    <FormControlLabel 
+                    className="form-control"
+                    value=" Other" 
                      control={<Radio color='black' />} 
-                     label="  Working part-time" />
-                    <FormControlLabel 
-                    className="form-control"
-                     value="  Other" 
-                      control={<Radio color='black' />} 
-                      label="  Others" />
+                     label="  Other" />
+                    
                 </RadioGroup>
              <div className='buttons'>
                 <Button 
@@ -70,4 +66,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form4
+export default Form6

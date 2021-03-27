@@ -8,49 +8,52 @@ import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
 
- const OptionalQuestion1 = ({formData, navigation, setForm}) => {
+ const Form9 = ({formData, navigation, setForm}) => {
 
-     const{Areyousavingjointlyorseparately }=formData
+     const {Areyoumarried} =formData
 
-    
+   
+    const marriagestatus =() => {
+        let status = ''
+        if (formData.Areyoumarried === "Yes") {
+             status = navigation.next()
+        } else {
+             status = navigation.go(8)
+        }
+        return status
+    }
 
 
     return (
         <Container  className= "form">
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5" className="question">Are you saving jointly or separately?</Typography>
-            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you married ?
-            " name="Areyousavingjointlyorseparately" value={Areyousavingjointlyorseparately} onChange={setForm}>
+            <Typography variant="h5" className="question">Are you married?</Typography>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you married ?" name="Areyoumarried" value={Areyoumarried} onChange={setForm}>
                 <FormControlLabel
                 className="form-control"  
-                 value="Separately"
+                 value="No"
                   control={<Radio color='black'/>} 
-                 label="Separately" />
+                 label="No" />
                 <FormControlLabel 
                 className="form-control"
-                 value="Jointly" 
+                 value="Yes" 
+
                  control={<Radio color='black'/>} 
-                 label="Jointly" />
-                 <FormControlLabel 
-                className="form-control"
-                 value="Not Applicable" 
-                 control={<Radio color='black'/>} 
-                 label="Not Applicable" />
-                
+                 label="Yes" />
             </RadioGroup>
          <div className='buttons'>
             <Button 
             variant='contained'
             color='primary' 
             style={{marginTop:'1rem', marginRight:'3rem'}}
-            onClick ={()=>navigation.previous()}>
+            onClick ={()=>navigation.previous(5)}>
                 Back
             </Button>
             <Button 
             variant='contained'
             color='secondary' 
             style={{marginTop:'1rem'}}
-            onClick ={()=>navigation.next()}>
+            onClick ={()=>marriagestatus()}>
             Next
             </Button>
          </div>
@@ -60,4 +63,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default OptionalQuestion1
+export default Form9

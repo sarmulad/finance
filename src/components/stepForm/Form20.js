@@ -1,40 +1,69 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
  import './index.css';
 
 import { Typography, Button } from '@material-ui/core';
 
 
- const Form20= ({formData, navigation, setForm}) => {
-   
-     const{ZipCode }=formData
-     
-     const ZipCodeField =() => {
-        let status = ''
-        if (formData.ZipCode == "") {
-            status = null
-            alert("Please enter your Zip code")
-        } else {
-            status = navigation.next()
-        }
-        return status
-    }
+
+ const Form26 = ({formData, navigation, setForm}) => {
+    
+     const{Howdidyouhearaboutus }=formData
 
     
 
 
     return (
         <Container  className= "form">
-                <Typography  controlled="true" variant='h4'>Where are you located ? </Typography>
-                <input type='number' placeholder='Zip code (e.g 90210)'
-                    name='ZipCode'
-                    onChange = {setForm}
-                    value = {ZipCode}
-                    style={{border:'1px solid black', padding:'15px',margin:'50px 0px 80px 0px', width:'90%',outline:'none'}}
-                />
-               
-            <div >
+        <FormControl component="fieldset" style={{width:'100%'}}>
+            <Typography variant="h5" className="question">How did you hear about us?</Typography>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How did you hear about us?."
+                name="Howdidyouhearaboutus" 
+                value={Howdidyouhearaboutus} 
+                onChange={setForm}>
+                <FormControlLabel
+                    className="form-control"   
+                    value="Internetsearch"
+                    control={<Radio color='black'/>} 
+                    label="Internet search" />
+
+                <FormControlLabel 
+                className="form-control"   
+                    value="Online ad" 
+                    control={<Radio color='black'/>} 
+                    label="Online ad" /> 
+
+                <FormControlLabel 
+                className="form-control"   
+                    value="TV" 
+                    control={<Radio color='black'/>} 
+                    label="TV or streaming video" /> 
+
+                    <FormControlLabel 
+                    className="form-control"   
+                    value="Podcast" 
+                    control={<Radio color='black'/>} 
+                    label="Podcast" /> 
+
+                    <FormControlLabel 
+                    className="form-control"   
+                    value="Physical mail" 
+                    control={<Radio color='black'/>} 
+                    label="Physical mail" /> 
+
+                    <FormControlLabel 
+                    className="form-control"   
+                    value="Other" 
+                    control={<Radio color='black'/>} 
+                    label="Other" /> 
+              
+                
+            </RadioGroup>
+            <div className='buttons'>
                 <Button 
                 variant='contained'
                 color='primary' 
@@ -46,13 +75,14 @@ import { Typography, Button } from '@material-ui/core';
                 variant='contained'
                 color='secondary' 
                 style={{marginTop:'1rem'}}
-                onClick ={()=>ZipCodeField()}>
+                onClick ={()=>navigation.next()}>
                 Next
                 </Button>
             </div>
 
+    </FormControl>
 </Container>
     )
 }
 
-export default Form20
+export default Form26

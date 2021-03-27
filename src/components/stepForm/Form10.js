@@ -9,57 +9,54 @@ import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
 
 
- const Form10 = ({formData, navigation, setForm}) => {
-     const{Doyouownahome}=formData
-     
-     const homeOwnership =() => {
-        let status;
-        if (formData.Doyouownahome == "Yes") {
-             status = navigation.next()
-        } else {
-             status = navigation.go(12)
-        }
-        return status
-        // console.log(status)
-    }
+ const Form12 = ({formData, navigation, setForm}) => {
+     const{Doyouownabusiness}=formData
+
+    //  const [value, setValue] = React.useState('No');
+
+    //  const handleChange = (event) => {
+    //    setValue(event.target.value);
+    //  };
+
 
     return (
         <Container  className= "form">
-            <FormControl  component="fieldset" style={{width:'100%'}}>
-                <Typography variant="h5" className="question">Do you own your home?</Typography>
-                <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you own your home" name="Doyouownahome" value={Doyouownahome} onChange={setForm}>
-                    <FormControlLabel
-                    className="form-control" 
-                    value="No"
-                    control={<Radio color='black'/>} 
-                    label="No"/>
-                    <FormControlLabel 
-                    className="form-control" 
-                    value="Yes" 
-                    control={<Radio color='black'/>} 
-                    label="Yes" />
-                    
-                </RadioGroup>
-            <div >
-                <Button 
-                variant='contained'
-                color='primary' 
-                style={{marginTop:'1rem', marginRight:'3rem'}}
-                onClick ={()=> navigation.go(8)}>
-                    Back
-                </Button>
-                <Button 
-                variant='contained'
-                color='secondary' 
-                style={{marginTop:'1rem'}}
-                onClick ={()=>homeOwnership()}>
-                Next
-                </Button>
-            </div>
-        </FormControl>
+                <FormControl component="fieldset" style={{width:'100%'}}>
+                    <Typography variant="h5" className="question">Do you own a business?</Typography>
+                    <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you own a business?" name="Doyouownabusiness" value={Doyouownabusiness} onChange={setForm}>
+                        <FormControlLabel
+                        className="form-control"
+                            value="No"
+                            control={<Radio color='black' />} 
+                            label="No" />
+                        <FormControlLabel 
+                        className="form-control"
+                            value="Yes, 1" 
+                            control={<Radio color='black'/>} 
+                            label="Yes, 1" /> 
+    
+                        
+                    </RadioGroup>
+                <div className='buttons'>
+                    <Button 
+                    variant='contained'
+                    color='primary' 
+                    style={{marginTop:'1rem', marginRight:'3rem'}}
+                    onClick ={()=>navigation.previous()}>
+                        Back
+                    </Button>
+                    <Button 
+                    variant='contained'
+                    color='secondary' 
+                    style={{marginTop:'1rem'}}
+                    onClick ={()=>navigation.next()}>
+                    Next
+                    </Button>
+                </div>
 
-   </Container>
+            </FormControl>
+        </Container>
     )
 }
 
-export default Form10
+export default Form12

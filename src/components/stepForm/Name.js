@@ -1,11 +1,11 @@
 import React from "react"; 
 import Container from '@material-ui/core/Container'
  import './index.css';
-import { Typography, Button } from '@material-ui/core';
+import { Typography, Button, FormControl } from '@material-ui/core';
 
 const Name = ({formData, navigation, setForm}) =>  { 
       const {FirstName, LastName} = formData
-
+      
       const submitData = () => {
 
        fetch('https://hooks.zapier.com/hooks/catch/1451168/on0te22/', {
@@ -21,14 +21,17 @@ const Name = ({formData, navigation, setForm}) =>  {
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify(formData)
          // body data type must match "Content-Type" header
-      })
+      }).then(() =>{
+        window.location.href = '/successpage'
+           console.log('done' )
+      } )
     //   window.location.href('/sucesspage')
-      window.location.href = '/successpage'
-        // .catch(err, )
+        .catch(() =>alert( `seems there is an error. Try again !!!` ))
     }
 
 return ( 
     <Container   className= "form">
+    <FormControl component="fieldset" style={{width:'100%'}}>
                 <Typography variant="h5" gutterBottom >Great! We've found some fantastic advisors who fit your needs </Typography>
                 <Typography variant="h5" gutterBottom>Who should we have them reach out to? </Typography>
 
@@ -47,7 +50,7 @@ return (
                 value = {LastName}
                 style={{border:'1px solid #dee1e9', borderRadius:'5px', padding:'5px',margin:'5px 0px 0px 0px', width:'90%',outline:'none'}}
             />  
-            <div >
+            <div className='buttons'>
                 <Button 
                 variant='contained'
                 color='primary' 
@@ -63,7 +66,7 @@ return (
                  Submit
                 </Button>
             </div>
-
+            </FormControl>
         </Container>
 ); 
 } 

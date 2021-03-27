@@ -4,63 +4,64 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
-import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
+import { Typography, Button } from '@material-ui/core';
 
- const Form9 = ({formData, navigation, setForm}) => {
 
-     const {Areyoumarried} =formData
+ const Form11 = ({formData, navigation, setForm}) => {
 
-   
-    const marriagestatus =() => {
-        let status = ''
-        if (formData.Areyoumarried == "Yes") {
-             status = navigation.next()
-        } else {
-             status = navigation.go(10)
-        }
-        return status
-    }
+     const {Doyoucurrentlyhavechildrenunder18}= formData
 
 
     return (
         <Container  className= "form">
-        <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5" className="question">Are you married?</Typography>
-            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you married ?" name="Areyoumarried" value={Areyoumarried} onChange={setForm}>
-                <FormControlLabel
-                className="form-control"  
-                 value="No"
-                  control={<Radio color='black'/>} 
-                 label="No" />
-                <FormControlLabel 
-                className="form-control"
-                 value="Yes" 
+                <FormControl component="fieldset" style={{width:'100%'}}>
+                    <Typography variant="h5" className="question">Do you currently have children under 18?</Typography>
+                    <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you currently have children under 18?              
+                    " name="Doyoucurrentlyhavechildrenunder18" value={Doyoucurrentlyhavechildrenunder18} onChange={setForm}>
+                        <FormControlLabel
+                        className="form-control"  
+                            value="No"
+                            control={<Radio color='black'/>} 
+                            label="No" />
+                        <FormControlLabel 
+                        className="form-control"
+                            value="Yes,1" 
+                            control={<Radio color='black'/>} 
+                            label="Yes, 1" /> 
+                        <FormControlLabel 
+                        className="form-control"
+                            value="Yes, 2" 
+                            control={<Radio color='black'/>} 
+                            label="Yes , 2" />
+                        <FormControlLabel 
+                        className="form-control"
+                            value="Yes, 3 or more" 
+                            control={<Radio color='black' />} 
+                            label="Yes , 3 or more" />
+                        
+                    </RadioGroup>
+                <div className='buttons'>
+                    <Button 
+                    variant='contained'
+                    color='primary' 
+                    style={{marginTop:'1rem', marginRight:'3rem'}}
+                    onClick ={()=> navigation.go(8)}>
+                        Back
+                    </Button>
+                    <Button 
+                    variant='contained'
+                    color='secondary' 
+                    style={{marginTop:'1rem'}}
+                    onClick ={()=>navigation.next()}>
+                    Next
+                    </Button>
+                </div>
+            </FormControl>
 
-                 control={<Radio color='black'/>} 
-                 label="Yes" />
-            </RadioGroup>
-         <div >
-            <Button 
-            variant='contained'
-            color='primary' 
-            style={{marginTop:'1rem', marginRight:'3rem'}}
-            onClick ={()=>navigation.previous()}>
-                Back
-            </Button>
-            <Button 
-            variant='contained'
-            color='secondary' 
-            style={{marginTop:'1rem'}}
-            onClick ={()=>marriagestatus()}>
-            Next
-            </Button>
-         </div>
-      </FormControl>
-
-   </Container>
+        </Container>
     )
 }
 
-export default Form9
+export default Form11

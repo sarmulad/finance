@@ -30,7 +30,7 @@ import { Typography, Button } from '@material-ui/core';
                     <FormControlLabel  className="form-control" value=" 20-29 years"  control={<Radio color='black'/>} label=" 20-29 years" />
                     <FormControlLabel  className="form-control" value="30+ years"  control={<Radio color='black'/>} label=" 30+ years" />
                 </RadioGroup>
-             <div >
+             <div className='buttons'>
                 <Button 
                 variant='contained'
                 color='primary' 

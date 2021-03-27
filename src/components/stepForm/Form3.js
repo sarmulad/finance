@@ -31,7 +31,7 @@ import { Typography, Button } from '@material-ui/core';
                     <FormControlLabel className="form-control" value=" I work with a financial advisor"  control={<Radio color='black'/>} label=" I work with a financial advisor" />
                     <FormControlLabel className="form-control" value="None of the above"  control={<Radio color='black' />} label=" None of the above" />
                 </RadioGroup>
-             <div >
+             <div className='buttons'>
                 <Button 
                 variant='contained'
                 color='primary' 

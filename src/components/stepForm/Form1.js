@@ -26,19 +26,19 @@ import { Typography, Button } from '@material-ui/core';
                   <FormControlLabel className="form-control" value=" I don't have a plan"  control={<Radio color='black' />} label=" I don't have a plan" />
                   <FormControlLabel className="form-control" value="other"  control={<Radio color='black' />} label=" Others" />
                 </RadioGroup>
-                
-                <div>
+                <div className='buttons'>
                     
-                    <Button 
-                    variant='contained'
-                    // className={classes.btn}
-                    style={{marginTop:'1rem',}}
-                    onClick ={()=>navigation.next()}>
-                    Next
-                    </Button>
-              </div>
+                <Button 
+                variant='contained'
+                // className={classes.btn}
+                style={{marginTop:'1rem',}}
+                onClick ={()=>navigation.next()}>
+                Next
+                </Button>
+          </div>
+              
           </FormControl>
-         
+        
      </Container>
     
 

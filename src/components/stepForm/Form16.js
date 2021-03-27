@@ -1,63 +1,60 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
-import Radio from '@material-ui/core/Radio';
-import RadioGroup from '@material-ui/core/RadioGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormControl from '@material-ui/core/FormControl';
-import { Typography, Button } from '@material-ui/core';
+
  import './index.css';
 
+import { Typography, Button,FormControl } from '@material-ui/core';
 
- const Form16 = ({formData, navigation, setForm}) => {
-     const{Doyouhaveanemergencyfund}=formData
 
-    //  const [value, setValue] = React.useState('Yes');
+ const Form20= ({formData, navigation, setForm}) => {
+   
+     const{ZipCode }=formData
+     
+     const ZipCodeField =() => {
+        let status = ''
+        if (formData.ZipCode === "") {
+            status = null
+            alert("Please enter your Zip code")
+        } else {
+            status = navigation.next()
+        }
+        return status
+    }
 
-    //  const handleChange = (event) => {
-    //    setValue(event.target.value);
-    //  };
+    
 
 
     return (
         <Container  className= "form">
-            <FormControl component="fieldset" style={{width:'100%'}}>
-                <Typography variant="h5" className="question">Do you have an emergency fund?</Typography>
-                <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you have an emergency fund?"
-                    name="Doyouhaveanemergencyfund" 
-                    value={Doyouhaveanemergencyfund} 
-                    onChange={setForm}>
-                    <FormControlLabel
-                    className="form-control"  
-                        value="Yes"
-                        control={<Radio color='black'/>} 
-                        label="Yes" />
-                    <FormControlLabel 
-                    className="form-control" 
-                        value="No" 
-                        control={<Radio color='black'/>} 
-                        label="No" /> 
-                    
-                </RadioGroup>
-                <div >
-                    <Button 
-                    variant='contained'
-                    color='primary' 
-                    style={{marginTop:'1rem', marginRight:'3rem'}}
-                    onClick ={()=>navigation.previous()}>
-                        Back
-                    </Button>
-                    <Button 
-                    variant='contained'
-                    color='secondary' 
-                    style={{marginTop:'1rem'}}
-                    onClick ={()=>navigation.next()}>
-                    Next
-                    </Button>
-                </div>
+        <FormControl component="fieldset" style={{width:'100%'}}>
 
+                <Typography  controlled="true" variant='h4'>Where are you located ? </Typography>
+                <input type='number' placeholder='Zip code (e.g 90210)'
+                    name='ZipCode'
+                    onChange = {setForm}
+                    value = {ZipCode}
+                    style={{border:'1px solid black', padding:'15px',margin:'50px 0px 80px 0px', width:'90%',outline:'none'}}
+                />
+               
+            <div className='buttons'>
+                <Button 
+                variant='contained'
+                color='primary' 
+                style={{marginTop:'1rem', marginRight:'3rem'}}
+                onClick ={()=>navigation.previous()}>
+                    Back
+                </Button>
+                <Button 
+                variant='contained'
+                color='secondary' 
+                style={{marginTop:'1rem'}}
+                onClick ={()=>ZipCodeField()}>
+                Next
+                </Button>
+            </div>
         </FormControl>
 </Container>
     )
 }
 
-export default Form16
+export default Form20
