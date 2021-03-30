@@ -31,9 +31,9 @@ import { Typography, Button } from '@material-ui/core';
                             label="No" />
                         <FormControlLabel 
                         className="form-control"
-                            value="Yes, 1" 
+                            value="Yes" 
                             control={<Radio color='black'/>} 
-                            label="Yes, 1" /> 
+                            label="Yes" /> 
     
                         
                     </RadioGroup>
