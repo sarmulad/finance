@@ -37,9 +37,9 @@ import { Typography, Button } from '@material-ui/core';
 
                 <FormControlLabel 
                 className="form-control"   
-                    value="$$75,000 - $99,999" 
+                    value="$75,000 - $99,999" 
                     control={<Radio color='black'/>} 
-                    label="$$75,000 - $99,999" /> 
+                    label="$75,000 - $99,999" /> 
 
                     <FormControlLabel 
                     className="form-control"   

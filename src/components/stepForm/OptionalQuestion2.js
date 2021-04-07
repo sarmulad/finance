@@ -45,7 +45,7 @@ import { Typography, Button } from '@material-ui/core';
             variant='contained'
             color='secondary' 
             style={{marginTop:'1rem'}}
-            onClick ={()=>navigation.next()}>
+            onClick ={()=>navigation.go(14)}>
             Next
             </Button>
          </div>

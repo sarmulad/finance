@@ -16,7 +16,7 @@ import Form10 from '../stepForm/Form10'
 import Form11 from '../stepForm/Form11'
 import Form12 from '../stepForm/Form12'
 import Form13 from '../stepForm/Form13'
-import Form14 from '../stepForm/Form14'
+// import Form14 from '../stepForm/Form14'
 // import Form18 from '../stepForm/Form18removed'
 import Form15 from '../stepForm/Form15'
 import Form16 from '../stepForm/Form16'
@@ -53,14 +53,14 @@ const defaultData ={
    Doyouhavea401k:'Yes',
    DoyouhaveanIRA:'Yes',
    Doyouhaveanemergencyfund:'Yes',
-   importantForAFinancialAdvisor:'Taxexpertise',
+//    importantForAFinancialAdvisor:'Taxexpertise',
 //    Issociallyresponsibleinvestingimportanttoyou:'Musthave',
    Doyoucurrentlyhaveafinancialadvisor:'No',
    ZipCode:'',
    PleaseEstimateYourHouseholdIncome:'Lessthan$40,000',
    Pleaseestimateyourtotalinvestableassets:'Lessthan$25,000',
    Pleaseestimateyourcurrentmonthlysavings:'Lessthan$100',
-   Howdidyouhearaboutus:'Internetsearch',
+//    Howdidyouhearaboutus:'Internetsearch',
    messagetomatch: '',
     Email:'',
     FirstName:'',
@@ -116,7 +116,7 @@ const MultistepForm = () => {
     const [formData, setForm]= useForm(defaultData)
     const {step, navigation} = useStep({
         steps,
-        initialStep: 0
+        initialStep: 15
     })
 
     
@@ -162,12 +162,12 @@ const MultistepForm = () => {
             return <Form12 {...props}/>;
             case 15 : 
             return <Form13 {...props}/>;
-            case 16 : 
-            return <Form14 {...props}/>;
+            // case 16 : 
+            // return <Form14 {...props}/>;
             // case 20 : 
             // return <Form18 {...props}/>;
-            case 17 : 
-            return <Form15 {...props}/>;
+            case 16 : 
+            return <Form19 {...props}/>;
             case 18 : 
             return <OptionalQuestion2 {...props}/>;
             case 19 : 

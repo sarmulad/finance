@@ -32,7 +32,7 @@ const Name = ({formData, navigation, setForm}) =>  {
 return ( 
     <Container   className= "form">
     <FormControl component="fieldset" style={{width:'100%'}}>
-                <Typography variant="h5" gutterBottom >Great! We've found a great advisor who fit your needs </Typography>
+                <Typography variant="h5" gutterBottom >Great! We've found a great advisor who fits your needs </Typography>
                 <Typography variant="h5" gutterBottom>Who should we have them reach out to? </Typography>
 
                 <span style={{fontFamily:'sans-serif',marginBottom:'8px'}}>First Name: </span><br/>
