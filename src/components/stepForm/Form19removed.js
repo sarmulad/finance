@@ -10,7 +10,7 @@ import { Typography, Button } from '@material-ui/core';
 
 
 
- const Form26 = ({formData, navigation, setForm}) => {
+ const Form19= ({formData, navigation, setForm}) => {
     
      const{Howdidyouhearaboutus }=formData
 
@@ -85,4 +85,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form26
+export default Form19

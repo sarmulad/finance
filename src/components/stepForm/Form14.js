@@ -4,61 +4,60 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
+import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
-import { Typography, Button } from '@material-ui/core';
 
+ const Form14 = ({formData, navigation, setForm}) => {
+     const{PleaseEstimateYourHouseholdIncome }=formData
 
- const Form18 = ({formData, navigation, setForm}) => {
-     const{Pleaseestimateyourcurrentmonthlysavings}=formData
-
-    
+ 
 
 
     return (
         <Container  className= "form">
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5" className="question">Please estimate your current monthly savings.</Typography>
-            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Please estimate your current monthly savings.."
-                name="Pleaseestimateyourcurrentmonthlysavings" 
-                value={Pleaseestimateyourcurrentmonthlysavings} 
+            <Typography variant="h5" className="question">Please estimate your household income.</Typography>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Please estimate your household income."
+                name="PleaseEstimateYourHouseholdIncome" 
+                value={PleaseEstimateYourHouseholdIncome} 
                 onChange={setForm}>
                 <FormControlLabel
-                     className="form-control"   
-                    value="Lessthan$100"
+                className="form-control"   
+                    value="Lessthan$40,000"
                     control={<Radio color='black'/>} 
                     label="
-                    Less than $100" />
-
-                <FormControlLabel 
-                className="form-control"    
-                    value="$100 - $249" 
-                    control={<Radio  color='black'/>} 
-                    label="$100 - $249" /> 
+                    Less than $40,000" />
 
                 <FormControlLabel 
                 className="form-control"   
-                    value="$250-$499" 
-                    control={<Radio  color='black'/>} 
-                    label="$250 - $499" /> 
+                    value="$40,000 - $74,999" 
+                    control={<Radio color='black'/>} 
+                    label="$40,000 - $74,999" /> 
+
+                <FormControlLabel 
+                className="form-control"   
+                    value="$75,000 - $99,999" 
+                    control={<Radio color='black'/>} 
+                    label="$75,000 - $99,999" /> 
 
                     <FormControlLabel 
                     className="form-control"   
-                    value="$500 - $999" 
+                    value="$100,000 - $149,999" 
                     control={<Radio color='black'/>} 
-                    label="$500 - $999" /> 
-
-                    <FormControlLabel 
-                    className="form-control"    
-                    value="$1,000 - $1,999" 
-                    control={<Radio color='black'/>} 
-                    label="$1,000 - $1,999" /> 
+                    label="$100,000 - $149,999" /> 
 
                     <FormControlLabel 
                     className="form-control"   
-                    value="Over $2,000" 
+                    value="$150,000 - $249,999" 
                     control={<Radio color='black'/>} 
-                    label="Over $2,000" /> 
+                    label="$150,000 - $249,999" /> 
+
+                    <FormControlLabel 
+                    className="form-control"   
+                    value="Over $250,000" 
+                    control={<Radio color='black'/>} 
+                    label="Over $250,000" /> 
               
                 
             </RadioGroup>
@@ -84,4 +83,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form18
+export default Form14

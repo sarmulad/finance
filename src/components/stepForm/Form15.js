@@ -8,7 +8,7 @@ import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
 
- const Form19 = ({formData, navigation, setForm}) => {
+ const Form15= ({formData, navigation, setForm}) => {
      const{Doyoucurrentlyhaveafinancialadvisor}=formData
 
 
@@ -55,4 +55,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form19
+export default Form15

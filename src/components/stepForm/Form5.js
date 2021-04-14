@@ -8,7 +8,7 @@ import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
 
- const Form6= ({formData, navigation, setForm}) => {
+ const Form5= ({formData, navigation, setForm}) => {
      const{Wheredoyouexpectthemajorityofyourretirementincometocomefrom}=formData
 
     //  const [value, setValue] = React.useState('Savings and investments');
@@ -66,4 +66,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form6
+export default Form5

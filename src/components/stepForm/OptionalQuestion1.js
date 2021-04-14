@@ -19,7 +19,7 @@ import { Typography, Button } from '@material-ui/core';
         <Container  className= "form">
         <FormControl component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5" className="question">Are you saving jointly or separately?</Typography>
-            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you married ?
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you saving jointly or separately?
             " name="Areyousavingjointlyorseparately" value={Areyousavingjointlyorseparately} onChange={setForm}>
                 <FormControlLabel
                 className="form-control"  

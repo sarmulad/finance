@@ -4,62 +4,56 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
+import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
-import { Typography, Button } from '@material-ui/core';
 
-
- const Form10 = ({formData, navigation, setForm}) => {
-     const{Doyouownahome}=formData
-     
-     const homeOwnership =() => {
-        let status;
-        if (formData.Doyouownahome ==="Yes") {
-             status = navigation.next()
-        } else {
-             status = navigation.go(10)
-        }
-        return status
-        // console.log(status)
-    }
+ const Form8= ({formData, navigation, setForm}) => {
+ 
+     const{Howcomfortableareyouwithinvesting}=formData
 
     return (
-        <Container  className= "form">
-            <FormControl  component="fieldset" style={{width:'100%'}}>
-                <Typography variant="h5" className="question">Do you own your home?</Typography>
-                <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Do you own your home" name="Doyouownahome" value={Doyouownahome} onChange={setForm}>
-                    <FormControlLabel
-                    className="form-control" 
-                    value="No"
-                    control={<Radio color='black'/>} 
-                    label="No"/>
-                    <FormControlLabel 
-                    className="form-control" 
-                    value="Yes" 
-                    control={<Radio color='black'/>} 
-                    label="Yes" />
-                    
-                </RadioGroup>
-            <div className='buttons'>
-                <Button 
-                variant='contained'
-                color='primary' 
-                style={{marginTop:'1rem', marginRight:'3rem'}}
-                onClick ={()=> navigation.previous(6)}>
-                    Back
-                </Button>
-                <Button 
-                variant='contained'
-                color='secondary' 
-                style={{marginTop:'1rem'}}
-                onClick ={()=>homeOwnership()}>
-                Next
-                </Button>
-            </div>
-        </FormControl>
+        <Container   className= "form">
+        <FormControl component="fieldset" style={{width:'100%'}}>
+            <Typography variant="h5" className="question">How comfortable are you with investing?</Typography>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How comfortable are you with investing? " name="Howcomfortableareyouwithinvesting" value={Howcomfortableareyouwithinvesting} onChange={setForm}>
+                <FormControlLabel
+                className="form-control"
+                 value="Verycomfortable"
+                  control={<Radio color='black'/>} 
+                 label="Very comfortable" />
+                <FormControlLabel 
+                className="form-control"
+                 value="Somewhat comfortable" 
+                 control={<Radio color='black'/>} 
+                 label="Somewhat comfortable" />
+                <FormControlLabel
+                className="form-control"
+                 value="Not comfortable at all" 
+                 control={<Radio color='black'/>}
+                  label="Not comfortable at all" />
+                
+            </RadioGroup>
+         <div className='buttons'>
+            <Button 
+            variant='contained'
+            color='primary' 
+            style={{marginTop:'1rem', marginRight:'3rem'}}
+            onClick ={()=>navigation.go(7)}>
+                Back
+            </Button>
+            <Button 
+            variant='contained'
+            color='secondary' 
+            style={{marginTop:'1rem'}}
+            onClick ={()=>navigation.next()}>
+            Next
+            </Button>
+         </div>
 
+      </FormControl>
    </Container>
     )
 }
 
-export default Form10
+export default Form8

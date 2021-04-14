@@ -16,8 +16,16 @@ const validateEmail = (e) => {
 	} else { 
 	setEmailError('Enter valid Email!') 
 	} 
-    
 } 
+
+const submitEmail = () => {
+    if (!Email || !Phone) {
+        alert('Please enter a valid phone and Email')
+    }
+    else {
+        return navigation.next()
+    }
+}
 
 
 return ( 
@@ -44,6 +52,7 @@ return (
                     <span style={{fontFamily:'sans-serif', marginBottom:'8px'}}>Enter Phone: </span><br/>
                     <input type='tel' 
                         name='Phone'
+                        required='true'
                         onChange = {setForm}
                         value = {Phone}
                         style={{border:'1px solid #dee1e9 ', borderRadius:'5px', padding:'5px',margin:'5px 0px 0px 0px', width:'90%',outline:'none'}}
@@ -54,14 +63,14 @@ return (
                     variant='contained'
                     color='primary' 
                     style={{marginTop:'1rem', marginRight:'3rem'}}
-                    onClick ={()=>navigation.previous()}>
+                    onClick ={()=>navigation.go(21)}>
                         Back
                     </Button>
                     <Button 
                     variant='contained'
                     color='secondary' 
                     style={{marginTop:'1rem'}}
-                    onClick ={()=>navigation.next()}>
+                    onClick ={submitEmail}>
                     Next
                     </Button>
                 </div>

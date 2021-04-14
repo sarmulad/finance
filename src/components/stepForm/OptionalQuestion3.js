@@ -19,7 +19,7 @@ import { Typography, Button } from '@material-ui/core';
         <Typography variant='h6' className= "banner">Find Your Advisor Match</Typography>
         <FormControl  controlled="true" component="fieldset" style={{width:'100%'}}>
             <Typography variant="h5" className="question">Why are you looking for a new one?</Typography>
-            <RadioGroup  style={{paddingLeft:'10px'}} aria-label="Are you married ?
+            <RadioGroup  style={{paddingLeft:'10px'}} aria-label="Why are you looking for a new one ?
             " name="Whyareyoulookingforanewone?" value={Whyareyoulookingforanewone} onChange={setForm}>
                 <FormControlLabel
                 className="form-control"  

@@ -8,7 +8,7 @@ import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
 
- const Form16 = ({formData, navigation, setForm}) => {
+ const Form13 = ({formData, navigation, setForm}) => {
      const{Doyouhaveanemergencyfund}=formData
 
     //  const [value, setValue] = React.useState('Yes');
@@ -60,4 +60,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form16
+export default Form13

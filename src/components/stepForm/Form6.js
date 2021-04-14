@@ -8,60 +8,59 @@ import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
 
- const Form8= ({formData, navigation, setForm}) => {
- 
-     const{Howcomfortableareyouwithinvesting}=formData
+ const Form6 = ({formData, navigation, setForm}) => {
 
+     const {Areyoumarried} =formData
 
-    //  const [value, setValue] = React.useState('Very comfortable');
-
-    //  const handleChange = (event) => {
-    //    setValue(event.target.value);
-    //  };
+   
+    const marriagestatus =() => {
+        let status = ''
+        if (formData.Areyoumarried === "Yes") {
+             status = navigation.next()
+        } else {
+             status = navigation.go(7)
+        }
+        return status
+    }
 
 
     return (
-        <Container   className= "form">
+        <Container  className= "form">
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5" className="question">How comfortable are you with investing?</Typography>
-            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="How comfortable are you with investing? " name="Howcomfortableareyouwithinvesting" value={Howcomfortableareyouwithinvesting} onChange={setForm}>
+            <Typography variant="h5" className="question">Are you married?</Typography>
+            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Are you married ?" name="Areyoumarried" value={Areyoumarried} onChange={setForm}>
                 <FormControlLabel
-                className="form-control"
-                 value="Verycomfortable"
+                className="form-control"  
+                 value="No"
                   control={<Radio color='black'/>} 
-                 label="Very comfortable" />
+                 label="No" />
                 <FormControlLabel 
                 className="form-control"
-                 value="Somewhat comfortable" 
+                 value="Yes" 
+
                  control={<Radio color='black'/>} 
-                 label="Somewhat comfortable" />
-                <FormControlLabel
-                className="form-control"
-                 value="Not comfortable at all" 
-                 control={<Radio color='black'/>}
-                  label="Not comfortable at all" />
-                
+                 label="Yes" />
             </RadioGroup>
          <div className='buttons'>
             <Button 
             variant='contained'
             color='primary' 
             style={{marginTop:'1rem', marginRight:'3rem'}}
-            onClick ={()=>navigation.previous()}>
+            onClick ={()=>navigation.previous(5)}>
                 Back
             </Button>
             <Button 
             variant='contained'
             color='secondary' 
             style={{marginTop:'1rem'}}
-            onClick ={()=>navigation.next()}>
+            onClick ={()=>marriagestatus()}>
             Next
             </Button>
          </div>
-
       </FormControl>
+
    </Container>
     )
 }
 
-export default Form8
+export default Form6

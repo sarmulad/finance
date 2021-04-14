@@ -6,7 +6,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
  import './index.css';
-
+ 
 
  const OptionalQuestion2 = ({formData, navigation, setForm}) => {
 
@@ -38,14 +38,14 @@ import { Typography, Button } from '@material-ui/core';
             variant='contained'
             color='primary' 
             style={{marginTop:'1rem', marginRight:'3rem'}}
-            onClick ={()=> navigation.go(8)}>
+            onClick ={()=> navigation.previous()}>
                 Back
             </Button>
             <Button 
             variant='contained'
             color='secondary' 
             style={{marginTop:'1rem'}}
-            onClick ={()=>navigation.go(14)}>
+            onClick ={()=>navigation.next()}>
             Next
             </Button>
          </div>

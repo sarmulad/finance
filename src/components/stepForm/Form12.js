@@ -9,7 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
 
 
- const Form15 = ({formData, navigation, setForm}) => {
+ const Form12 = ({formData, navigation, setForm}) => {
      const{DoyouhaveanIRA}=formData
     
 
@@ -57,4 +57,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form15
+export default Form12

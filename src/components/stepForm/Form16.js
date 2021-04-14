@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container'
 import { Typography, Button,FormControl } from '@material-ui/core';
 
 
- const Form20= ({formData, navigation, setForm}) => {
+ const Form16= ({formData, navigation, setForm}) => {
    
      const{ZipCode }=formData
      
@@ -14,7 +14,7 @@ import { Typography, Button,FormControl } from '@material-ui/core';
         let status = ''
         if (formData.ZipCode === "") {
             status = null
-            alert("Please enter your Zip code")
+            alert("Please enter a valid Zip code")
         } else {
             status = navigation.next()
         }
@@ -57,4 +57,4 @@ import { Typography, Button,FormControl } from '@material-ui/core';
     )
 }
 
-export default Form20
+export default Form16

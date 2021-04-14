@@ -9,7 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { Typography, Button } from '@material-ui/core';
 
 
- const Form12 = ({formData, navigation, setForm}) => {
+ const Form10 = ({formData, navigation, setForm}) => {
      const{Doyouownabusiness}=formData
 
     //  const [value, setValue] = React.useState('No');
@@ -59,4 +59,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form12
+export default Form10

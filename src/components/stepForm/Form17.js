@@ -8,59 +8,59 @@ import { Typography, Button } from '@material-ui/core';
  import './index.css';
 
 
- const Form23 = ({formData, navigation, setForm}) => {
-     const{PleaseEstimateYourHouseholdIncome }=formData
+ const Form17= ({formData, navigation, setForm}) => {
+     const{Pleaseestimateyourtotalinvestableassets }=formData
 
- 
-
+   
 
     return (
         <Container  className= "form">
         <FormControl component="fieldset" style={{width:'100%'}}>
-            <Typography variant="h5" className="question">Please estimate your household income.</Typography>
-            <RadioGroup  controlled="true" style={{paddingLeft:'10px'}} aria-label="Please estimate your household income."
-                name="PleaseEstimateYourHouseholdIncome" 
-                value={PleaseEstimateYourHouseholdIncome} 
+            <Typography variant="h5" className="question">Please estimate your total investable assets.</Typography>
+            <RadioGroup  controlled="true"  style={{paddingLeft:'10px'}} aria-label="Please estimate your total investable assets.."
+                name="Pleaseestimateyourtotalinvestableassets" 
+                value={Pleaseestimateyourtotalinvestableassets} 
                 onChange={setForm}>
                 <FormControlLabel
                 className="form-control"   
-                    value="Lessthan$40,000"
+                    value="Lessthan$25,000"
                     control={<Radio color='black'/>} 
                     label="
-                    Less than $40,000" />
+                    Less than $25,000" />
 
                 <FormControlLabel 
                 className="form-control"   
-                    value="$40,000 - $74,999" 
+                    value="$25,000-$99,999" 
                     control={<Radio color='black'/>} 
-                    label="$40,000 - $74,999" /> 
+                    label="$25,000 - $99,999" /> 
 
                 <FormControlLabel 
                 className="form-control"   
-                    value="$75,000 - $99,999" 
+                    value="$100,000 - $249,999" 
                     control={<Radio color='black'/>} 
-                    label="$75,000 - $99,999" /> 
+                    label="$100,000 - $249,999" /> 
 
                     <FormControlLabel 
                     className="form-control"   
-                    value="$100,000 - $149,999" 
-                    control={<Radio color='black'/>} 
-                    label="$100,000 - $149,999" /> 
+                    value="$250,000 - $999,999" 
+                    control={<Radio  color='black'/>} 
+                    label="$250,000 - $999,999" /> 
+
+                    <FormControlLabel 
+                    className="form-control"    
+                    value="$1,000,000 - $4,999,999" 
+                    control={<Radio color='black' />} 
+                    label="$1,000,000 - $4,999,999" /> 
 
                     <FormControlLabel 
                     className="form-control"   
-                    value="$150,000 - $249,999" 
+                    value="Over $5,000,000" 
                     control={<Radio color='black'/>} 
-                    label="$150,000 - $249,999" /> 
-
-                    <FormControlLabel 
-                    className="form-control"   
-                    value="Over $250,000" 
-                    control={<Radio color='black'/>} 
-                    label="Over $250,000" /> 
+                    label="Over $5,000,000" /> 
               
                 
             </RadioGroup>
+
             <div className='buttons'>
                 <Button 
                 variant='contained'
@@ -83,4 +83,4 @@ import { Typography, Button } from '@material-ui/core';
     )
 }
 
-export default Form23
+export default Form17
